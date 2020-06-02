@@ -8,7 +8,9 @@ class NavBar extends React.Component{
         return(
             <div className='nav-bar'>
 
-                <h1 className='logo'>Map My Walk</h1>
+                <Link to='/'>
+                    <h1 className='logo'>Map My Walk</h1>
+                </Link>
 
                 {/* <img src={logo} /> */}
 
@@ -20,13 +22,13 @@ class NavBar extends React.Component{
                 <a className='shop-nav nav-bar-item'>Shop</a>
 
                 <nav className="login-signup">
-                    <Link to="/login" activeClassName='login-button'>
+                    <Link to="/login">
                     <button className='login-button'>
                         LOG IN
                     </button>
                     </Link>
 
-                    <Link to="/signup" activeClassName='signup-button'>
+                    <Link to="/signup">
                     <button className='signup-button'>
                         SIGN UP
                     </button>
