@@ -5,6 +5,7 @@ export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 const receiveCurrentUser = currentUser => {
+    // debugger;
     return {
         type: RECEIVE_CURRENT_USER,
         currentUser,
@@ -12,12 +13,14 @@ const receiveCurrentUser = currentUser => {
 }
 
 const logoutCurrentUser = () => {
+    // debugger;
     return {
         type: LOGOUT_CURRENT_USER,
     };
 }
 
 const receiveErrors = (errors = []) => {
+    // debugger;
     console.log(errors);
     return {
         type: RECEIVE_ERRORS,
