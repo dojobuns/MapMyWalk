@@ -1,0 +1,46 @@
+
+a, u {
+    text-decoration: none;
+}
+
+.login-signup {
+    /* margin-left: 95px; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 45px;
+}
+
+.login-button {
+    margin-right: 20px;
+    font-size: 12.4px;
+    background-color: white;
+    font-weight: bold;
+    height: 33px;
+    width: 98px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.signup-button {
+    background-color: #16d374;
+    font-size: 12.4px;
+    font-weight: bold;
+    color: white;
+    height: 33px;
+    width: 98px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.login-button:hover {
+    background-color: rgb(238,238,238);
+    cursor: pointer;
+}
+
+.signup-button:hover {
+    background-color: rgb(15,147,81);
+    cursor: pointer;
+}
