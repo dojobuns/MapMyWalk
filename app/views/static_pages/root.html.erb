@@ -1,3 +1,7 @@
+<% if logged_in?  %>
+    <li><%= current_user.username %></li>
+    <li><%= current_user.session_token %></li>
+<% end %>
 <div id="root">
   <h1>No Reaction</h1>
 </div>

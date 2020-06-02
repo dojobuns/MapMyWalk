@@ -11,13 +11,16 @@ class Api::SessionsController < ApplicationController
             render :new
         else
             login!(@user)
-            redirect_to user_url(@user)
+            render "api/users/show"
         end
     end
 
     def destroy
-        logout!
-        
-        redirect_to new_session_url
-      end
+        if logged_in?
+            logout!
+            render json: {}
+        else
+            render json: ['Not logged in'], status: 404
+        end
+    end
 end
