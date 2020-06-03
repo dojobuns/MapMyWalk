@@ -1,0 +1,75 @@
+.ashyo-fp {
+    display: flex;
+    justify-content: center;
+    position:relative;
+    left: 140px;
+    top: 88px;
+}
+
+.signup-button-splash {
+    background-color: #16d374;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 65px;
+    right: 390px;
+    color: white;
+    height: 44px;
+    width: 290px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.signup-button-splash:hover {
+    cursor: pointer;
+}
+
+.own-every-step {
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'Teko', sans-serif;
+    position: relative;
+    top: 94px;
+    right: 415px;
+    color: white;
+}
+
+.line-1, .line-2 {
+    font-family: 'Teko', sans-serif;   
+    font-size: 60px;
+    position: relative;
+    color: white;
+    bottom: 18px;
+    right: 185px;
+}
+
+.line-1 {
+
+}
+
+.splash-text-1 {
+    font-family: sans-serif;   
+    position: relative;
+    top: 25px;
+    right: 345px;
+    color: white;
+}
+
+.splash-text-2 {
+    margin-top: 5px;
+    font-family: sans-serif;   
+    position: relative;
+    top: 25px;
+    right: 290px;
+    color: white;
+}
+
+.splash-text-3 {
+    margin-top: 5px;
+    font-family: sans-serif;   
+    position: relative;
+    top: 25px;
+    right: 267px;
+    color: white;
+}

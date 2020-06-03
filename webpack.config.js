@@ -10,6 +10,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name][md5:hash].[ext]",
+            outputPath: "webpack-assets/",
+            publicPath: "/assets/webpack-assets/",
+          },
+        },
+      },
+      {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
@@ -23,7 +34,11 @@ module.exports = {
   },
   devtool: 'source-map',
   resolve: {
-    extensions: [".js", ".jsx", "*"]
+    extensions: [".js", ".jsx", "*"],
+    alias: {
+      assets: path.resolve(__dirname, "app", "assets"),
+      images: path.resolve(__dirname, "app", "assets", "images"),
+    },
   }
 };
 

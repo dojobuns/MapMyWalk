@@ -6,7 +6,7 @@ class Profile extends React.Component {
     }
 
     render(){
-        debugger;
+        // debugger;
         const display = this.props.currentUser ? (
             <span>
                 <h1>{this.props.currentUser.email}</h1>

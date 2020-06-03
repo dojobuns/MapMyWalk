@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   
   let preloadedState = undefined;
-  debugger;
+  // debugger;
   if (window.currentUser) {
-    debugger;
+    // debugger;
     preloadedState = {
       session: {
         currentUser: window.currentUser
