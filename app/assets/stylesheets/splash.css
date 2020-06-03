@@ -44,10 +44,6 @@
     right: 185px;
 }
 
-.line-1 {
-
-}
-
 .splash-text-1 {
     font-family: sans-serif;   
     position: relative;
@@ -72,4 +68,32 @@
     top: 25px;
     right: 267px;
     color: white;
+}
+
+.already-walker{
+    position: relative;
+    top: 100px;
+    right: 307px;
+    color: white;
+    font-style: italic;
+}
+
+.login-button-splash {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    height: 33px;
+    width: 98px;
+    border-radius: 5px;
+    border-color: white;
+    outline: none;
+    position: relative;
+    top: 76px;
+    right: 170px;
+}
+
+.login-button-splash:hover {
+    background-color: rgba(144, 238, 144, 0.3);
+
 }

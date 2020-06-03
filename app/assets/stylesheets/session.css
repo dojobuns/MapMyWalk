@@ -1,6 +1,148 @@
 .session-form {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(243,243,243);
+    height: 800px;
     position: relative;
-    top: 180px;
+    top: 90px;
 }
+
+.input-box-session {
+    height: 35px;
+    width: 320px;
+
+    border: 2px solid lightgrey;
+    background-color: rgb(243,243,243);
+}
+
+.session-demo-button {
+    background-color: #3b5998;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    left: 3px;
+    color: white;
+    height: 45px;
+    width: 320px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.session-demo-button:hover {
+    background-color: #2e4475;
+    cursor: pointer;
+}
+
+.or-separator {
+    color: rgb(161, 161, 161);
+    font-size: 14px;
+}
+
+.or-hr-1 {
+    display: block;
+    width: 120px;
+    color: rgb(161, 161, 161);
+    background-color: rgb(161, 161, 161);
+    position: relative;
+    top: 16px;
+    right: 100px;
+}
+
+.or-hr-2 {
+    display: block;
+    width: 120px;
+    color: rgb(161, 161, 161);
+    background-color: rgb(161, 161, 161);
+    position: relative;
+    bottom: 16px;
+    left: 100px;
+}
+
+.dob {
+    position: relative;
+    height: 40px;
+    width: 324px;
+    right: 1px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid lightgrey;
+    color: rgb(172, 172, 172);
+}
+
+.signup-radio-button {
+    /* position: relative;
+    bottom: 5px;
+    margin-bottom: 10px; */
+}
+
+input[type=radio] {
+    height: 40px;
+    width: 153px;
+    border: 2px solid lightgrey;
+    padding: 0.5em;
+    -webkit-appearance: none;
+  }
+  
+  input[type=radio]:checked {
+    background-color: aliceblue;
+    background-size: 9px 9px;
+    border: 2px solid blue;
+  }
+  
+  input[type=radio]:focus {
+    outline-color: transparent;
+  }
+
+.radio-label {
+
+    position: relative;
+    right: 6px;
+}
+
+.male {
+    margin-right: 15px;
+}
+
+/* 
+label span:before {
+    border: 1px solid #222021;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+  
+label span:after {
+    background: #222021;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    transition: 300ms;
+    opacity: 0;
+}
+
+.signup-radio-button {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+label span {
+    position: relative;
+    line-height: 22px;
+}
+
+label span:before,label span:after {
+    content: '';
+} */

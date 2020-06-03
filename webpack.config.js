@@ -38,7 +38,7 @@ module.exports = {
     alias: {
       assets: path.resolve(__dirname, "app", "assets"),
       images: path.resolve(__dirname, "app", "assets", "images"),
-    },
+    }, 
   }
 };
 

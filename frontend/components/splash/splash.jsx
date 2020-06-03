@@ -32,6 +32,12 @@ class Splash extends React.Component{
                                 SIGN UP
                             </button>
                         </Link>
+                        <p className='already-walker'>Already a walker?</p>
+                        <Link to="/login">
+                            <button className='login-button-splash'>
+                                LOG IN
+                            </button>
+                        </Link>
                     </nav>
                 </div>
             </div>

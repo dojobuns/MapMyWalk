@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_185855) do
+ActiveRecord::Schema.define(version: 2020_06_03_213430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_06_02_185855) do
     t.string "gender", default: "m"
     t.integer "weight"
     t.integer "height"
-    t.integer "age"
+    t.string "dob"
   end
 
 end
