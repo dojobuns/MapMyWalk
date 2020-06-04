@@ -42,7 +42,7 @@ class SessionForm extends React.Component {
         let credentialError = '';
         // debugger;
 
-        // console.log(this.props.errors.responseJSON)
+        console.log(this.props.errors.responseJSON)
 
         if(this.props.errors.responseJSON) {
             this.props.errors.responseJSON.forEach(error => {

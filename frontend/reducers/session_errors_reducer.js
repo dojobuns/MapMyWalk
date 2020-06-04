@@ -17,4 +17,3 @@ import {
         return state;
     }
   };
-  

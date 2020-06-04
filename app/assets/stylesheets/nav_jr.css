@@ -1,6 +1,22 @@
 .nav-jr {
+    display: flex;
+    justify-content: center;
     background-color: aqua;
     position: relative;
     bottom: 15px;
     height: 100px;
+}
+
+.nav-jr-button {
+    border: 1px outset blue;
+    border-bottom: 2px solid green;
+    background-color: lightBlue;
+    height: 42px;
+    width: 236px;
+    cursor:pointer;
+}
+
+.nav-jr-button:hover {
+    background-color: blue;
+    color:white;
 }
