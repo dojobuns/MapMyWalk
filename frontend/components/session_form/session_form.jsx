@@ -15,7 +15,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger;
+        // debugger;
         this.props.action(this.state)
             .then(() => this.props.history.push(`/profile`));
     }
@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
     loginDemo(e) {
         e.preventDefault();
         // debugger;
-        const demoUser = { email: 'demo@gmail.com', password: 'password' };
+        const demoUser = { email: 'clifford.syan@gmail.com', password: 'password' };
 
         this.props.loginUser(demoUser)
             .then(() => this.props.history.push('/profile'));
