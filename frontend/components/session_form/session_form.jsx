@@ -23,7 +23,8 @@ class SessionForm extends React.Component {
     loginDemo(e) {
         e.preventDefault();
         // debugger;
-        const demoUser = { email: 'demo@demo', password: 'password' };
+        const demoUser = { email: 'demo@gmail.com', password: 'password' };
+
         this.props.loginUser(demoUser)
             .then(() => this.props.history.push('/profile'));
     }
