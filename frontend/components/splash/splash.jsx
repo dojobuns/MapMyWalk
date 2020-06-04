@@ -9,7 +9,7 @@ class Splash extends React.Component{
             <div>
                 <div className='ashyo-fp'>
                     
-                    <img src={ashyo} alt="walking" width='1375'/>
+                    <img src={window.ash_yo} alt="walking" width='1375'/>
                     <nav>
                         
                         <h1 className='own-every-step'>OWN EVERY STEP</h1>

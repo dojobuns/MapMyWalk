@@ -9,7 +9,7 @@ class NavBar extends React.Component{
             <div className='nav-bar'>
 
                 <Link to='/'>
-                    <img src={logo} className='logo' height='18' width='163.8' />
+                    <img src={window.mmrlogo} className='logo' height='18' width='163.8' />
                 </Link>
 
                 
