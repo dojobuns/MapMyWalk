@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
     // window.signup = sessionApiUtil.signUp;
     // window.fetchUser = sessionApiUtil.fetchUser;
-    // window.fetchUsers = sessionApiUtil.fetchUsers;
+    window.fetchUsers = sessionApiUtil.fetchUsers;
     // window.updateUser = sessionApiUtil.updateUser;
     // window.deleteUser = sessionApiUtil.deleteUser;
     // window.login = sessionApiUtil.login;
