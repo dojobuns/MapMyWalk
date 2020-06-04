@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import logo from '../../../app/assets/images/mmrlogo.png';
+import logo from 'images/mmrlogo.png';
 
 class NavBar extends React.Component{
 
@@ -9,10 +9,10 @@ class NavBar extends React.Component{
             <div className='nav-bar'>
 
                 <Link to='/'>
-                    <h1 className='logo'>Map My Walk</h1>
+                    <img src={logo} className='logo' height='18' width='163.8' />
                 </Link>
 
-                {/* <img src={logo} /> */}
+                
 
                 <a className='training-nav nav-bar-item'>Training</a>
                 <a className='routes-nav nav-bar-item'>Routes</a>

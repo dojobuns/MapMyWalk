@@ -1,0 +1,32 @@
+.session-login-button {
+    background-color: #1ddd7c;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    top: 15px;
+    left: 3px;
+    color: white;
+    height: 45px;
+    width: 320px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.session-login-button:hover {
+    background-color: #16d374;
+    cursor: pointer;
+}
+
+.login-page-signup-button {
+    border: none;
+    color: rgb(144, 144, 144);
+    font-weight: bold;
+    position: relative;
+    left: 120px;
+}
+
+.login-page-signup-button:hover {
+    cursor: pointer;
+    color: rgb(116, 116, 116);
+}

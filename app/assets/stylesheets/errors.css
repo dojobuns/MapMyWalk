@@ -1,0 +1,15 @@
+.error {
+    color: #e56474;
+}
+
+.input-error {
+    border: 1px solid #e56474;
+    background-color: rgb(243,243,243);
+    height: 35px;
+    width: 320px;
+    margin-bottom: 20px;
+}
+
+::placeholder {
+    color: rgb(165, 165, 165);
+}

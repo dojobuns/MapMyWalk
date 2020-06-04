@@ -47,6 +47,7 @@ export const deleteUser = userId => {
 }
 
 export const login = user => {
+    // debugger;
     return (
         $.ajax({
             url: `/api/session`,
@@ -54,6 +55,7 @@ export const login = user => {
             data: { user },
         })
     );
+    // debugger;
 }
 
 export const logout = () => {
