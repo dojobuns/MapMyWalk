@@ -5,8 +5,16 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script type="text/javascript">
+      window.ash_yo = "<%= image_url('ash_yo_front_page.PNG') %>";
+      window.mmrlogo = "<%= image_url('mmrlogo.png') %>";
+    </script>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap" rel="stylesheet">
+
     <% if current_user %>
       <script>
         window.currentUser = {

@@ -7,8 +7,7 @@ class Api::SessionsController < ApplicationController
         @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
         
         if @user.nil?
-            flash.now[:errors] = ['Invalid email or password.']
-            render :new
+            render json: ['Nope. Wrong credentials!'], status: 401
         else
             login!(@user)
             render "api/users/show"
