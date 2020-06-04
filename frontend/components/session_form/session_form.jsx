@@ -85,8 +85,8 @@ class SessionForm extends React.Component {
 
                 <br/>
 
-                <div>Male</div>
-                <div>Female</div>
+                <div className='male-label'>Male</div>
+                <div className='female-label'>Female</div>
 
                 <label className='radio-label male'>
                     <input type="radio" className='custom-radios signup-radio-button' name="gender" id="male" value='m' onChange={this.update('gender')}></input>
