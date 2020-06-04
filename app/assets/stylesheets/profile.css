@@ -1,4 +1,49 @@
 .profile {
+    display: flex; 
+    justify-content: center;
     position: relative;
     top: 100px;
+}
+
+.profile-display {
+    border: 1px solid black;
+    position: relative;
+    height: 132px;
+    width: 298px;
+    top: 198px;
+    left: 493px;
+    background-color: #f8f8f8;
+}
+
+.profile-name {
+    position: relative;
+    top: -94px;
+    left: 108px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: rgb(68,68,68);
+    font-size: 14px;
+}
+
+.profile-signout-button {
+    position: relative;
+    top: -50px;
+    left: 130px;
+}
+
+.hidey-box {
+    height: 40px;
+    width: 240px;
+    z-index: 1;
+    background-color: white;
+    position: relative;
+    top: -120px;
+    left: 800px;
+}
+
+.tiny-pro-pic {
+    position: absolute;
+    top: -13vh;
+    left: 156vh;
+    z-index: 2;
 }
