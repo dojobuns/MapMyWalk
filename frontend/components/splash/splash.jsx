@@ -1,5 +1,5 @@
 import React from 'react';
-import ashyo from 'images/ash_yo_front_page.png';
+// import ashyo from 'images/ash_yo_front_page.png';
 
 import { Link } from 'react-router-dom';
 
