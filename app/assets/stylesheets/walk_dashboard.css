@@ -1,8 +1,12 @@
 .walk-dashboard-component {
     height: 450px;
     width: 618px;
-    background-color: blueviolet;
+    background-color: cyan;
     position: relative;
     top: 250px;
     right: 465px;
+}
+
+.last-li {
+    margin-bottom: 10px;
 }

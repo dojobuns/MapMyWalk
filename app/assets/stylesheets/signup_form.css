@@ -11,3 +11,7 @@
     cursor: pointer;
     color: rgb(116, 116, 116);
 }
+/* 
+.input-box-session:active {
+    border: 3px solid blue;
+} */

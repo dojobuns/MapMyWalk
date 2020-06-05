@@ -3,9 +3,9 @@ import Profile from './profile';
 import { logoutUser } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger;
+    // debugger;
     return {
-        currentUser: state.session.currentUser,
+        currentUser: state.session.currentUser.user,
     }
 }
 

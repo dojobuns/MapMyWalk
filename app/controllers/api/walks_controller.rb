@@ -7,7 +7,7 @@ class Api::WalksController < ApplicationController
     end
 
     def create
-        debugger;
+        # debugger;
         @walk = Walk.new(walk_params)
         @walk.walker_id = params[:walker_id]
         @user = User.find(@walk.walker_id)

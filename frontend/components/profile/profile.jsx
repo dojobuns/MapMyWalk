@@ -7,8 +7,11 @@ class Profile extends React.Component {
         super(props);
     }
 
+    componentDidMount(){
+    }
+
     render(){
-        debugger;
+        // debugger;
         const current_user = this.props.currentUser
         const display = this.props.currentUser ? (
             <span className='profile-display'>
@@ -20,15 +23,25 @@ class Profile extends React.Component {
             <span>
             </span>
         );
-
-        const dashboard = <WalkDashBoardContainer />
+        // debugger;
+        const dashboard = <WalkDashBoardContainer currentUser={current_user} />
 
         return(
             <div>
                 <div className='profile'>
                 <div className='hidey-box'></div>
                 <span>
-                <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic'/>
+                    {/* <div className='profile-drop-down'>
+                        <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic'/>
+                    </div> */}
+                    <div class="dropdown">
+                    <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic dropbtn'/>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
                 </span>
                     <br/>
                     {display}

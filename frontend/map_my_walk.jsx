@@ -11,9 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // debugger;
   if (window.currentUser) {
     // debugger;
+    const { user, walks } = window.currentUser;
     preloadedState = {
+      entities: {
+        walks: walks,
+      },
       session: {
-        currentUser: window.currentUser
+        currentUser: {
+          user: user
+        },
       }
     };
   }
