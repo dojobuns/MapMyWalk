@@ -11,8 +11,10 @@
       window.routesidebar = '<%= image_url('route-side-bar-placeholder.png') %>';
       window.mapplaceholder = '<%= image_url('map-placeholder.png') %>';
       window.cy_profile_pic = '<%= image_url('cy-profile-pic.jpg') %>';
+      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>";
     </script>
 
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 

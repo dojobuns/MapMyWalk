@@ -11,7 +11,7 @@
     height: 132px;
     width: 298px;
     top: 198px;
-    left: 493px;
+    left: 475px;
     background-color: #f8f8f8;
 }
 
@@ -38,12 +38,12 @@
     background-color: white;
     position: relative;
     top: -120px;
-    left: 800px;
+    left: 820px;
 }
 
 .tiny-pro-pic {
-    position: absolute;
-    top: -13vh;
-    left: 156vh;
+    position: relative;
+    top: -114px;
+    left: 781px;
     z-index: 2;
 }

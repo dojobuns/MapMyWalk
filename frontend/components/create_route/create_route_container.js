@@ -2,8 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import CreateRoute from './create_route';
 import {
-    requestWalks,
-    requestWalk,
+    fetchWalks,
 } from '../../actions/walks_actions'
 
 const mapStateToProps = state => {
@@ -14,8 +13,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        requestWalk: () => dispatch(requestWalk()),
-        requestWalks: () => dispatch(requestWalks()),
+        fetchWalks: () => dispatch(fetchWalks()),
     }
 }
 

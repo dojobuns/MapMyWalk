@@ -29,3 +29,7 @@
     height: calc(100vh - 70px);
     width: calc(168.6vh);
 }
+
+.route-map:hover {
+    cursor: crosshair;
+}
