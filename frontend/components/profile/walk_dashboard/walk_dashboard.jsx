@@ -34,6 +34,6 @@ class WalkDashboard extends React.Component {
             </div>
         )
     }
-}
+} // doesnt work on first load of login FIX THIS
 
 export default WalkDashboard;
