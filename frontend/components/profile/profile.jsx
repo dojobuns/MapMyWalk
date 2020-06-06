@@ -24,7 +24,7 @@ class Profile extends React.Component {
             <span>
             </span>
         );
-        // debugger;
+
         const dashboard = <WalkDashBoardContainer currentUser={current_user} />
 
         return(

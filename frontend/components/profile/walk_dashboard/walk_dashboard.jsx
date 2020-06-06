@@ -35,5 +35,5 @@ class WalkDashboard extends React.Component {
         )
     }
 }
-
+ // doesnt work on first log in????????? WHY FIX THIS
 export default WalkDashboard;

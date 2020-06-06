@@ -3,7 +3,7 @@ import React from 'react';
 class WalkItem extends React.Component {
     render() {
         const { walk, idx } = this.props;
-        // debugger;
+        debugger;
         return(
             <div>
                 <li>{idx}: {`Location: ${walk.map}`}
