@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-class NavJr extends React.Component {
+class NavJr1 extends React.Component {
     render(){
         return (
-            <div className='nav-jr'>
+            <div className='nav-jr-1'>
                 <Link to='/route/create'>
                     <button className='create-route-button nav-jr-button btn'>Create Route</button>
                 </Link>
@@ -18,4 +18,4 @@ class NavJr extends React.Component {
     }
 }
 
-export default NavJr;
+export default NavJr1;

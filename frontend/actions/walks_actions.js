@@ -13,7 +13,7 @@ export const receiveWalks = walks => {
 export const receiveWalk = walk => {
     return {
         type: RECEIVE_WALK,
-        walk
+        walk,
     };
 };
 
@@ -21,4 +21,7 @@ export const fetchWalks = () => dispatch => WalkAPIUtil.fetchWalks()
     .then(walks => dispatch(receiveWalks(walks)));
 
 export const fetchWalk = id => dispatch => WalkAPIUtil.fetchWalk(id)
+    .then(walk => dispatch(receiveWalk(walk)));
+
+export const createWalk = walkForm => dispatch => WalkAPIUtil.createWalk(walkForm)
     .then(walk => dispatch(receiveWalk(walk)));

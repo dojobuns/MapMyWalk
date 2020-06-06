@@ -20,3 +20,9 @@ export const createWalk = walkForm => (
     })
 );
 
+export const deleteWalk = walkId => (
+    $.ajax({
+        method: 'DELETE',
+        url: 'api/walks/${walkId}'
+    })
+)

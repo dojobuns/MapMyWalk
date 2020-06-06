@@ -1,5 +1,6 @@
 import React from 'react';
 import WalkItem from './walk_items';
+import MostRecentWalk from './most_recent_walk';
 
 class WalkDashboard extends React.Component {
     constructor(props){
@@ -14,14 +15,22 @@ class WalkDashboard extends React.Component {
     
     render(){
         const { user } = this.props.currentUser
-        // console.log(walks);
+        // console.log(user.walks);
+        // debugger;
         return(
-            <div className='walk-dashboard-component'>
-                <ul style={{ listStyle: "none inside" }}>
-                    {user.walks.map((walkId, i) => (
-                        <WalkItem walk={this.props.walks[walkId]} key={walkId} idx={i + 1}/>
-                    ))}
+            <div>
+                <ul>
+                    <div className='recent-walk'>
+                        <MostRecentWalk recentWalk={this.props.walks[user.walks[user.walks.length - 1]]} />
+                    </div>
                 </ul>
+                <div className='walk-dashboard-component'>
+                    <ul style={{ listStyle: "none inside" }}>
+                        {user.walks.map((walkId, i) => (
+                            <WalkItem walk={this.props.walks[walkId]} key={walkId} idx={i + 1}/>
+                        ))}
+                    </ul>
+                </div>
             </div>
         )
     }

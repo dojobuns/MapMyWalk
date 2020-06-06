@@ -14,9 +14,9 @@ class NavBar extends React.Component{
 
                 
 
-                <a className='training-nav nav-bar-item'>Training</a>
-                <a className='routes-nav nav-bar-item'>Routes</a>
-                <a className='challenges-nav nav-bar-item'>Challenges</a>
+                <a href="https://www.linkedin.com/in/cliffordyan/" className='linkedin nav-bar-item'>LinkedIn</a>
+                <a href="https://github.com/dojobuns" className='github nav-bar-item'>Github</a>
+                <a className='challenges-nav nav-bar-item'>Routes</a>
                 <a className='go-mvp-nav nav-bar-item'>Go MVP</a>
                 <a className='blog-nav nav-bar-item'>Blog</a>
                 <a className='shop-nav nav-bar-item'>Shop</a>
@@ -34,7 +34,7 @@ class NavBar extends React.Component{
                     </button>
                     </Link>
                 </nav>
-
+                
             </div>
         )
     }

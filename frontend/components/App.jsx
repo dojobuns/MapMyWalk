@@ -6,6 +6,8 @@ import ProfileContainer from './profile/profile_container';
 import SplashContainer from './splash/splash_container';
 import NavJrContainer from './nav_jr/nav_jr_container';
 import CreateRouteContainer from './create_route/create_route_container';
+import WalkFormContainer from './walk_form/walk_form_container';
+import NavJrContainer1 from './nav_jr/nav_jr_container_1';
 
 import { 
   AuthRoute,
@@ -25,6 +27,8 @@ const App = () => (
     <ProtectedRoute exact path='/profile' component={ProfileContainer} />
     <ProtectedRoute path='/profile' component={NavJrContainer} />
     <ProtectedRoute path='/route/create' component={CreateRouteContainer} />
+    <ProtectedRoute path='/walk' component={NavJrContainer1} />
+    <ProtectedRoute path='/walk/create' component={WalkFormContainer} />
   </div>
 );
 

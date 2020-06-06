@@ -3,11 +3,12 @@ import React from 'react';
 class WalkItem extends React.Component {
     render() {
         const { walk, idx } = this.props;
-        debugger;
+        // debugger;
         return(
             <div>
                 <li>{idx}: {`Location: ${walk.map}`}
                 </li>
+                <li>{`Date: ${walk.date}`}</li>
                 <li>
                     {`Start Coordinates: latidude-${walk.start_lat} longitude-${walk.start_long}`}
                 </li>

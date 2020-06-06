@@ -1,6 +1,7 @@
 import React from 'react';
 import WalkDashBoardContainer from './walk_dashboard/walk_dashboard_container';
 import { capitalize } from '../../util/helper_util';
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
     constructor(props){
@@ -34,12 +35,13 @@ class Profile extends React.Component {
                     {/* <div className='profile-drop-down'>
                         <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic'/>
                     </div> */}
-                    <div class="dropdown">
+                    <div className="dropdown">
                     <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic dropbtn'/>
-                        <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                        <div className="dropdown-content">
+                            <Link to='/profile' className='dropdown-box'>Home</Link>
+                            <a href="https://www.linkedin.com/in/cliffordyan/" className='dropdown-box'>LinkedIn</a>
+                            <a href="https://github.com/dojobuns" className='dropdown-box'>GitHub</a>
+                            <a href="#" onClick={this.props.logoutUser} className='dropdown-box'>Logout</a>
                         </div>
                     </div>
                 </span>
