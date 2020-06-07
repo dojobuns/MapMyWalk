@@ -15,7 +15,7 @@
 #  updated_at :datetime         not null
 #
 class Walk < ApplicationRecord
-    validates :walker_id, :map, :start_lat, :start_long, :end_lat, :end_long, presence: true
+    validates :walker_id, :location, :start_lat, :start_long, :end_lat, :end_long, presence: true
 
     belongs_to :walker,
         foreign_key: :walker_id,

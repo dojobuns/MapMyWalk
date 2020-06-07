@@ -3,6 +3,7 @@
     justify-content: center;
     position: relative;
     top: 100px;
+    left: 150px;
 }
 
 .profile-display {
@@ -31,84 +32,4 @@
     left: 130px;
 }
 
-.hidey-box {
-    height: 40px;
-    width: 240px;
-    z-index: 1;
-    background-color: white;
-    position: relative;
-    top: -120px;
-    left: 820px;
-}
 
-.tiny-pro-pic {
-    position: relative;
-    top: -114px;
-    left: 781px;
-    z-index: 2;
-}
-
-.profile-drop-down {
-    position: relative;
-    display: inline-block;
-
-}
-
-.dropbtn {
-    color: white;
-    border: none;
-}
-  
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 695px;
-    top: -80px;
-    background-color: white;
-    min-width: 92px;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    font-weight: 400;
-}
-
-.dropdown-content a {
-    color: #8991a0;
-    border: 1px solid lightgrey;
-    padding: 12px 45px;
-    text-decoration: none;
-    display: flex;
-    align-content: center;
-    width: 30px;
-}
-
-.dropdown-box:hover {
-    color: #515355;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-  
-.nav-bar-item {
-    color: #9ba4b6;
-}
-
-.nav-bar-item:hover {
-    color: rgb(104, 104, 104);
-    cursor: pointer;
-}
-
-.recent-walk {
-    position: relative;
-    top: 220px;
-    left: -420px;
-}
-
-.recent-walk-header {
-    font-weight: bold;
-    font-size: 18px;
-}

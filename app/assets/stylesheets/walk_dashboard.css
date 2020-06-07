@@ -1,12 +1,119 @@
 .walk-dashboard-component {
-    height: 450px;
+    height: 150px;
     width: 618px;
-    background-color: cyan;
     position: relative;
-    top: 250px;
+    top: 400px;
     right: 465px;
 }
 
 .last-li {
     margin-bottom: 10px;
+}
+
+.total-walks {
+    position: relative;
+    top: 250px;
+    left: -455px;
+    background-color: cadetblue;
+    height: 445px;
+}
+
+.total-walks-header {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.walking {
+    border: 1px solid rgb(197, 197, 197);
+    position: relative;
+    left: 5px;
+    top: -10px;
+}
+
+.walk-item-location {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    top: -100px;
+    left: 100px;
+}
+
+.walk-item-date {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    top: -115px;
+    left: 540px;
+}
+
+.walk-item-distance {
+    font-size: 58px;
+    color: #434343;
+    font-family: "Open Sans", sans-serif;
+}
+
+.distance-item {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    top: -110px;
+    left: 100px;
+}
+
+.recent-walk-header {
+    font-size:24px;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    top: -35px;
+}
+
+.distance-title {
+    font-size: 13.2px;
+}
+
+.recent-walk-line {
+    height: 1px;
+    width: 630px;
+    border-bottom: 1px solid #cccbcb;
+    position: relative;
+    top: -24px;
+}
+
+.location-separator-line {
+    height: 100px;
+    width: 1px;
+    border-left: 1px solid #cccbcb;
+    position: relative;
+    top: -95px;
+    left: 265px;
+}
+
+.duration-separator-line {
+    height: 100px;
+    width: 1px;
+    border-left: 1px solid #cccbcb;
+    position: relative;
+    top: -37px;
+    left: 110px;
+}
+
+.duration-item {
+    color: #7a7a7a;
+    position: relative;
+    top: -320px;
+    left: 380px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.walk-item-duration-dash {
+    position: relative;
+    top: 7px;
+    font-size: 20px;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+}
+
+.distance-mile {
+    position: relative;
+    top: -125px;
+    left: 100px;
 }

@@ -9,6 +9,8 @@ class Profile extends React.Component {
     }
 
     componentDidMount(){
+        this.props.fetchWalks()
+        // debugger;
     }
 
     render(){
@@ -30,20 +32,12 @@ class Profile extends React.Component {
         return(
             <div>
                 <div className='profile'>
-                <div className='hidey-box'></div>
+                {/* <div className='hidey-box'></div> */}
                 <span>
                     {/* <div className='profile-drop-down'>
                         <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic'/>
                     </div> */}
-                    <div className="dropdown">
-                    <img src={window.cy_profile_pic} alt="" width='34' className='tiny-pro-pic dropbtn'/>
-                        <div className="dropdown-content">
-                            <Link to='/profile' className='dropdown-box'>Home</Link>
-                            <a href="https://www.linkedin.com/in/cliffordyan/" className='dropdown-box'>LinkedIn</a>
-                            <a href="https://github.com/dojobuns" className='dropdown-box'>GitHub</a>
-                            <a href="#" onClick={this.props.logoutUser} className='dropdown-box'>Logout</a>
-                        </div>
-                    </div>
+                    
                 </span>
                     <br/>
                     {display}

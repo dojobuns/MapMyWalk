@@ -8,6 +8,7 @@ import NavJrContainer from './nav_jr/nav_jr_container';
 import CreateRouteContainer from './create_route/create_route_container';
 import WalkFormContainer from './walk_form/walk_form_container';
 import NavJrContainer1 from './nav_jr/nav_jr_container_1';
+import FooterContainer from './footer/footer_container';
 
 import { 
   AuthRoute,
@@ -29,6 +30,7 @@ const App = () => (
     <ProtectedRoute path='/route/create' component={CreateRouteContainer} />
     <ProtectedRoute path='/walk' component={NavJrContainer1} />
     <ProtectedRoute path='/walk/create' component={WalkFormContainer} />
+    <Route exact path='/' component={FooterContainer} />
   </div>
 );
 

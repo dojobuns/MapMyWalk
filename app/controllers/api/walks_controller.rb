@@ -29,6 +29,6 @@ class Api::WalksController < ApplicationController
 
     def walk_params
         # debugger;
-        params.require(:walk).permit(:walker_id, :map, :date, :duration, :start_lat, :start_long, :end_lat, :end_long)
+        params.require(:walk).permit(:walker_id, :location, :date, :duration, :start_lat, :start_long, :end_lat, :end_long)
     end
 end

@@ -9,7 +9,7 @@ const mapStateToProps = state => {
     return {
         walk: {
             walker_id: state.session.currentUser.user.id,
-            map: '',
+            location: '',
             duration: 0,
             distance: 0,
             start_lat: 0,

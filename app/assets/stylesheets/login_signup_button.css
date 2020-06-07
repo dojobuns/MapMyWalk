@@ -23,6 +23,16 @@ a, u {
     outline: none;
 }
 
+.invis-login-button {
+    margin-right: 20px;
+    font-size: 12.4px;
+    height: 33px;
+    width: 98px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
 .signup-button {
     background-color: #16d374;
     font-size: 12.4px;
@@ -30,6 +40,18 @@ a, u {
     position: relative;
     right: 6px;
     color: white;
+    height: 33px;
+    width: 98px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.invis-signup-button {
+    font-size: 12.4px;
+    font-weight: bold;
+    position: relative;
+    right: 6px;
     height: 33px;
     width: 98px;
     border-radius: 5px;

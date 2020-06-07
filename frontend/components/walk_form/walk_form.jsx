@@ -26,7 +26,7 @@ class WalkForm extends React.Component {
                 <br/>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Map: <input type="text" value={this.state.map} onChange={this.update('map')}/>
+                        location: <input type="text" value={this.state.location} onChange={this.update('location')}/>
                     </label>
                     <br/>
                     <label>

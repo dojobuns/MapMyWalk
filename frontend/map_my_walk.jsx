@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       session: {
         currentUser: {
-          user: user
+          user: user,
+          walks: walks,
         },
       }
     };
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.login = sessionApiUtil.login;
     window.logout = sessionApiUtil.logout;
   const store = configureStore(preloadedState);
-  // window.getState = store.getState;
+  window.getState = store.getState;
   // window.dispatch = store.dispatch;
   
 
