@@ -117,3 +117,61 @@
     top: -125px;
     left: 100px;
 }
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-info {
+    height: 105px;
+    width: 154.5px;
+    background-color: #f7f7f7;
+}
+
+.dashboard-distance {
+    border: 1.5px solid #cacaca;
+}
+
+.dashboard-duration {
+    border-top: 1.5px solid #cacaca;
+    border-bottom: 1.5px solid #cacaca;
+}
+
+.dashboard-calories {
+    border: 1.5px solid #cacaca;
+}
+
+.dashboard-walks {
+    border-top: 1.5px solid #cacaca;
+    border-right: 1.5px solid #cacaca;
+    border-bottom: 1.5px solid #cacaca;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    color: #a7a7a7;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+}
+
+.dashboard-numbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 28px;
+    font-family: "Open Sans", sans-serif;
+    color: #7a7a7a;
+}
+
+.dashboard-units {
+    font-family: "Open Sans", sans-serif;
+    color: #a7a7a7;
+    font-size: 13.2px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}

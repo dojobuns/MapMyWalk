@@ -1,6 +1,7 @@
 import React from 'react';
 import WalkItem from './walk_items';
 import TotalWalks from './total_walks';
+import { selectAllWalks } from '../../../reducers/selectors';
 
 class WalkDashboard extends React.Component {
     constructor(props){
@@ -12,16 +13,29 @@ class WalkDashboard extends React.Component {
         this.props.fetchWalks();
         // this.props.fetchUsers();
     }
-    
+
     render(){
+        // debugger;
+        let { walks } = this.props
+        let recentWalk = 0;
+        if(walks === undefined || Object.keys(walks).length === 0){
+            recentWalk = this.props.emptyWalk;
+            // debugger;
+        } else {
+            walks = Object.values(walks);
+            recentWalk = walks[walks.length - 1];
+            // debugger;
+        }
+
+        // debugger;
         return(
             <div>
                 <div className='total-walks'>
-                    <TotalWalks />
+                    <TotalWalks walks={walks} />
                 </div>
                     <div className='walk-dashboard-component'>
                         <ul style={{ listStyle: "none inside" }}>
-                            <WalkItem />
+                            <WalkItem recentWalk={recentWalk} />
                         </ul>
                     </div>
             </div>

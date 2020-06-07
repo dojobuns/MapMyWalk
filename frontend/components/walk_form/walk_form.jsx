@@ -10,6 +10,7 @@ class WalkForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.state = {walk: this.state};
+        // debugger;
         this.props.createWalk(this.state)
             .then(() => this.props.history.push(`/profile`));
     }
@@ -35,6 +36,10 @@ class WalkForm extends React.Component {
                     <br/>
                     <label>
                         Duration: <input type="text" value={this.state.duration} onChange={this.update('duration')}/>
+                    </label>
+                    <br/>
+                    <label>
+                        Distance: <input type="text" value={this.state.distance} onChange={this.update('distance')}/>
                     </label>
                     <br/>
                     <label>
