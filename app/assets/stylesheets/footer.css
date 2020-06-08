@@ -1,0 +1,104 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    position: relative;
+    bottom: 100px;
+    height: 120px;
+    /* width: 100%; */
+    /* position: absolute; */
+    /* bottom: 80px; */
+    background-color: black;
+    color: white;
+    /* color: white; */
+    /* text-align: center; */
+  }
+
+.footer-route-image {
+    position: relative;
+    top: 70px;
+    left: 420px;
+    z-index: 1;
+}
+
+.footer-sr {
+    display: flex;
+    align-self: flex-end;
+    position: relative;
+    top: 150px;
+    height: 45px;
+    background-color: #f0f2f4;
+}
+
+.footer-logo {
+    position: relative;
+    top: 200px;
+    left: 630px;
+    height: 30px;
+    width: 260px;
+    border-right: 1px solid rgb(156, 156, 156);
+    z-index: 1;
+    padding-right: 10px;
+    margin-right: 5px;
+}
+
+.footer-button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    background-color: transparent;
+    color:#9297a3;
+    height: 33px;
+    width: 70px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-right: 20px;
+    top: 191px;
+    left: 640px;
+    z-index: 1;
+}
+
+.footer-walk:hover {
+    background: -webkit-linear-gradient(right, yellow, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-stroll:hover {
+    background: -webkit-linear-gradient(right, rgb(68, 255, 77), rgb(32, 117, 21));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-strut:hover {
+    background: -webkit-linear-gradient(right, rgb(68, 255, 255), rgb(134, 20, 187));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sections {
+    margin-right: 50px;
+    position: relative;
+    left: 635px;
+    top: 20px;
+}
+
+.footer-header {
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 10px;
+}
+
+.sections > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #8d979e;
+    margin-bottom: 4px;
+}
+
+.sections > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #8d979e;
+}

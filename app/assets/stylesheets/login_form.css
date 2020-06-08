@@ -23,7 +23,8 @@
     color: rgb(144, 144, 144);
     font-weight: bold;
     position: relative;
-    left: 120px;
+    bottom: 10px;
+    left: 270px;
 }
 
 .login-page-signup-button:hover {

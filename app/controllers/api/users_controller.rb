@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
+        @user = User.includes(:walks).find(params[:id])
         if @user
             render :show
         else

@@ -1,0 +1,1 @@
+json.partial! 'api/walks/walk', walk: @walk

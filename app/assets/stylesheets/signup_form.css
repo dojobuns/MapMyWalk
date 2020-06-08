@@ -3,11 +3,15 @@
     color: rgb(144, 144, 144);
     font-weight: bold;
     position: relative;
-
-    left: 130px;
+    bottom: 10px;
+    left: 270px;
 }
 
 .signup-page-login-button:hover {
     cursor: pointer;
     color: rgb(116, 116, 116);
 }
+/* 
+.input-box-session:active {
+    border: 3px solid blue;
+} */

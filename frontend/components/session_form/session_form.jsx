@@ -15,7 +15,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger;
+        // debugger;
         this.props.action(this.state)
             .then(() => this.props.history.push(`/profile`));
     }
@@ -23,7 +23,8 @@ class SessionForm extends React.Component {
     loginDemo(e) {
         e.preventDefault();
         // debugger;
-        const demoUser = { email: 'demo@demo', password: 'demodemo' };
+        const demoUser = { email: 'clifford.syan@gmail.com', password: 'password' };
+
         this.props.loginUser(demoUser)
             .then(() => this.props.history.push('/profile'));
     }
@@ -142,7 +143,7 @@ class SessionForm extends React.Component {
 
         return (
             <div className='session-form'>
-
+                <div className='session-form-group'>
                 {signupButton}
                 <br/>
                 <button type='submit' onClick={this.loginDemo} className='session-demo-button'>DEMO TRY OUT</button>
@@ -185,6 +186,8 @@ class SessionForm extends React.Component {
                     {date}
                     <button type='submit' className='session-login-button'>{this.props.formType}</button>
                 </form>
+                </div>
+                
             </div>
         )
     }

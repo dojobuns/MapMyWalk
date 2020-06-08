@@ -1,4 +1,156 @@
 .profile {
+    display: flex; 
+    justify-content: center;
     position: relative;
     top: 100px;
+    left: 150px;
+}
+
+.profile-display {
+    border: 1px solid #c3c3c3;
+    position: relative;
+    height: 132px;
+    width: 298px;
+    top: 193px;
+    left: 545px;
+    background-color: #f8f8f8;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+}
+
+.profile-name {
+    position: relative;
+    top: -94px;
+    left: 108px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: rgb(68,68,68);
+    font-size: 14px;
+}
+
+.profile-signout-button {
+    position: relative;
+    top: -50px;
+    left: 130px;
+}
+
+.long-beach {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13.2px;
+    color: #999999;
+    position: relative;
+    bottom: 90px;
+    left: 108px;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 5px;
+    width: 180px;
+}
+
+.mile-total {
+    display: flex;
+    flex-direction: row;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    bottom: 80px;
+    left: 110px;
+}
+
+.total-miles-text {
+    font-size: 12px;
+    color: #999999;
+    position: relative;
+    top: 3px;
+}
+/* .total */
+
+.mile-total-number {
+    font-size: 28px;
+    color: #444444;
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.profile-buttons-friends {
+    position: relative;
+    bottom: 64px;
+}
+
+.edit-profile, .find-friends {
+    width: 50%;
+    height: 31px;
+    border-radius: 0px;
+    background: none;
+    border: none;
+    border-top: 1px solid #c3c3c3;
+    color: #2F98D9;
+    font-size: 13.2px;
+}
+
+.edit-profile {
+    border-right: 1px solid #c3c3c3;
+}
+
+.edit-profile:hover, .find-friends:hover {
+    color: rgb(111, 188, 236);
+    cursor: pointer;
+}
+
+.ua-box {
+    width: 298px;
+    height: 111px;
+    background-color: #f8f8f8;
+    position: relative;
+    bottom: 47px;
+    border: 1px solid #c3c3c3;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+}
+
+.achievements {
+    width: 298px;
+    height: 62px;
+    background-color: #f8f8f8;
+    border: 1px solid #c3c3c3;
+    box-shadow: 2.5px 0px #e0e0e0;
+}
+
+.personal-statement {
+    width: 298px;
+    height: 81px;
+    background-color: #f8f8f8;
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    box-shadow: 2px 0px #e0e0e0;
+}
+
+.profile-about-me {
+    width: 298px;
+    height: 82px;
+    background-color: #f8f8f8;
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+}
+
+.triple-box {
+    position: relative;
+    bottom: 30px;
+}
+
+.gear-tracker {
+    width: 298px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    background-color: #f8f8f8;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+    position: relative;
+    bottom: 13px;
+}
+
+.challenges {
+    width: 298px;
+    height: 79px;
+    border: 1px solid #c3c3c3;
+    background-color: #f8f8f8;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+    position: relative;
+    top: 4px;
 }

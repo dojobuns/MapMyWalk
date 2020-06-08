@@ -1,0 +1,222 @@
+.walk-dashboard-component {
+    height: 150px;
+    width: 618px;
+    position: relative;
+    top: 340px;
+    right: 395px;
+}
+
+.last-li {
+    margin-bottom: 10px;
+}
+
+.total-walks {
+    position: relative;
+    width: 618px;
+    top: 200px;
+    left: -395px;
+    background-color: cadetblue;
+    height: 445px;
+}
+
+.total-walks-header {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.walking {
+    border: 1px solid rgb(197, 197, 197);
+    position: relative;
+    left: 5px;
+    top: -10px;
+}
+
+.walk-item-location {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    top: -100px;
+    left: 100px;
+}
+
+.walk-item-date {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    top: -115px;
+    left: 540px;
+}
+
+.walk-item-distance {
+    font-size: 58px;
+    color: #434343;
+    font-family: "Open Sans", sans-serif;
+}
+
+.distance-item {
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    top: -110px;
+    left: 100px;
+}
+
+.recent-walk-header {
+    font-size:24px;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    top: -35px;
+}
+
+.distance-title {
+    font-size: 13.2px;
+}
+
+.recent-walk-line {
+    height: 1px;
+    width: 630px;
+    border-bottom: 1px solid #cccbcb;
+    position: relative;
+    top: -24px;
+}
+
+.location-separator-line {
+    height: 100px;
+    width: 1px;
+    border-left: 1px solid #cccbcb;
+    position: relative;
+    top: -95px;
+    left: 265px;
+}
+
+.duration-separator-line {
+    height: 100px;
+    width: 1px;
+    border-left: 1px solid #cccbcb;
+    position: relative;
+    top: -37px;
+    left: 110px;
+}
+
+.duration-item {
+    color: #7a7a7a;
+    position: relative;
+    top: -320px;
+    left: 380px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.walk-item-duration-dash {
+    position: relative;
+    top: 7px;
+    font-size: 20px;
+    color: black;
+    font-family: "Open Sans", sans-serif;
+}
+
+.distance-mile {
+    position: relative;
+    top: -125px;
+    left: 100px;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-info {
+    height: 105px;
+    width: 154.5px;
+    background-color: #f7f7f7;
+}
+
+.dashboard-distance {
+    border: 1.5px solid #cacaca;
+}
+
+.dashboard-duration {
+    border-top: 1.5px solid #cacaca;
+    border-bottom: 1.5px solid #cacaca;
+}
+
+.dashboard-calories {
+    border: 1.5px solid #cacaca;
+}
+
+.dashboard-walks {
+    border-top: 1.5px solid #cacaca;
+    border-right: 1.5px solid #cacaca;
+    border-bottom: 1.5px solid #cacaca;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    color: #a7a7a7;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+}
+
+.dashboard-numbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 28px;
+    font-family: "Open Sans", sans-serif;
+    color: #7a7a7a;
+}
+
+.dashboard-units {
+    font-family: "Open Sans", sans-serif;
+    color: #a7a7a7;
+    font-size: 13.2px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.tab-toggle {
+    position: relative;
+    top: 129px;
+    right: 395px;
+}
+
+.tab-toggle > button {
+    width: 255px;
+    height: 45px;
+    border-radius: 1px;
+    
+    background-color: #f7f7f7;
+    font-family: "Open Sans", sans-serif;
+    color: #046AB2;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.activity-feed {
+    border: 1px solid #cacaca;
+}
+
+.all-day {
+    border: 1px solid #cacaca;
+}
+
+.my-dashboard{
+    border: 1px solid #cacaca;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 3px solid rgb(39, 140, 212);
+}
+
+.tab-toggle > button:hover {
+    background-color: white;
+    color: rgb(114, 181, 230);
+    cursor: pointer;
+}
+
+.tab-toggle > button:focus {
+    outline: none;
+}

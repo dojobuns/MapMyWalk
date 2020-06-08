@@ -1,0 +1,1 @@
+json.extract! walk, :id, :walker_id, :location, :start_lat, :start_long, :end_lat, :end_long, :distance, :duration, :date

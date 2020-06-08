@@ -1,0 +1,35 @@
+.create-route-component {
+    display: flex;
+    flex-direction: row;
+}
+
+.route-side-bar {
+    height: calc(100vh - 83px);
+    width: 340px;
+    background-color: brown;
+    position: relative;
+    top: 37px;
+}
+
+.route-map {
+    height: calc(100vh - 70px);
+    width: calc(168.6vh);
+    position: relative;
+    top: 37px;
+    background-color: aquamarine;
+}
+
+.route-side-bar-image {
+    height: calc(100vh - 83px);
+    width: 340px;
+
+}
+
+.route-map-image {
+    height: calc(100vh - 70px);
+    width: calc(168.6vh);
+}
+
+.route-map:hover {
+    cursor: crosshair;
+}

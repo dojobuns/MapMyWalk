@@ -1,0 +1,1 @@
+export const selectAllWalks = (walks) => Object.values(walks);

@@ -11,9 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // debugger;
   if (window.currentUser) {
     // debugger;
+    const { user, walks } = window.currentUser;
     preloadedState = {
+      entities: {
+        walks: walks,
+      },
       session: {
-        currentUser: window.currentUser
+        currentUser: {
+          user: user,
+          walks: walks,
+        },
       }
     };
   }
@@ -25,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.login = sessionApiUtil.login;
     window.logout = sessionApiUtil.logout;
   const store = configureStore(preloadedState);
-  // window.getState = store.getState;
+  window.getState = store.getState;
   // window.dispatch = store.dispatch;
   
 

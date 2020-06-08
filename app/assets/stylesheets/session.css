@@ -9,6 +9,11 @@
     top: 90px;
 }
 
+.session-form-group {
+    position: relative;
+    top: 100px;
+}
+
 .input-box-session {
     height: 35px;
     width: 320px;
@@ -39,6 +44,8 @@
 .or-separator {
     color: rgb(161, 161, 161);
     font-size: 14px;
+    position: relative;
+    left: 160px;
 }
 
 .or-hr-1 {
@@ -72,34 +79,28 @@
     color: rgb(172, 172, 172);
 }
 
-.signup-radio-button {
-    /* position: relative;
-    bottom: 5px;
-    margin-bottom: 10px; */
-}
-
 input[type=radio] {
     height: 40px;
     width: 153px;
     border: 2px solid lightgrey;
     padding: 0.5em;
     -webkit-appearance: none;
-  }
+}
   
-  input[type=radio]:checked {
+input[type=radio]:checked {
     /* background-color: aliceblue; */
     background-size: 9px 9px;
     border: 3px solid blue;
-  }
+}
   
-  input[type=radio]:focus {
+input[type=radio]:focus {
     outline-color: transparent;
-  }
+}
 
 .radio-label {
-
     position: relative;
     right: 6px;
+    bottom: 10px;
 }
 
 .male {
@@ -108,54 +109,14 @@ input[type=radio] {
 
 .male-label {
     position: relative;
-    top: 50px;
+    top: 40px;
     left: 10px;
-    /* z-index: 100; */
+    color: rgb(172,172,172);
 }
 
 .female-label {
     position: relative;
-    top: 33px;
+    top: 23px;
     left: 190px;
-    /* z-index: 100; */
+    color: rgb(172,172,172);
 }
-
-/* 
-label span:before {
-    border: 1px solid #222021;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: top;
-}
-  
-label span:after {
-    background: #222021;
-    width: 14px;
-    height: 14px;
-    position: absolute;
-    top: 2px;
-    left: 4px;
-    transition: 300ms;
-    opacity: 0;
-}
-
-.signup-radio-button {
-    display: none;
-}
-
-label {
-    display: inline-block;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-label span {
-    position: relative;
-    line-height: 22px;
-}
-
-label span:before,label span:after {
-    content: '';
-} */
