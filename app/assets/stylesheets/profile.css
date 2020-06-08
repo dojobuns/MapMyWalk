@@ -3,16 +3,18 @@
     justify-content: center;
     position: relative;
     top: 100px;
+    left: 150px;
 }
 
 .profile-display {
-    border: 1px solid black;
+    border: 1px solid #c3c3c3;
     position: relative;
     height: 132px;
     width: 298px;
-    top: 198px;
-    left: 475px;
+    top: 193px;
+    left: 545px;
     background-color: #f8f8f8;
+    box-shadow: 2.5px 2.5px #e0e0e0;
 }
 
 .profile-name {
@@ -31,84 +33,124 @@
     left: 130px;
 }
 
-.hidey-box {
-    height: 40px;
-    width: 240px;
-    z-index: 1;
-    background-color: white;
+.long-beach {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13.2px;
+    color: #999999;
     position: relative;
-    top: -120px;
-    left: 820px;
+    bottom: 90px;
+    left: 108px;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 5px;
+    width: 180px;
 }
 
-.tiny-pro-pic {
-    position: relative;
-    top: -114px;
-    left: 781px;
-    z-index: 2;
-}
-
-.profile-drop-down {
-    position: relative;
-    display: inline-block;
-
-}
-
-.dropbtn {
-    color: white;
-    border: none;
-}
-  
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-  
-.dropdown-content {
-    display: none;
-    position: absolute;
-    left: 695px;
-    top: -80px;
-    background-color: white;
-    min-width: 92px;
-    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    font-weight: 400;
-}
-
-.dropdown-content a {
-    color: #8991a0;
-    border: 1px solid lightgrey;
-    padding: 12px 45px;
-    text-decoration: none;
+.mile-total {
     display: flex;
-    align-content: center;
-    width: 30px;
+    flex-direction: row;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    bottom: 80px;
+    left: 110px;
 }
 
-.dropdown-box:hover {
-    color: #515355;
+.total-miles-text {
+    font-size: 12px;
+    color: #999999;
+    position: relative;
+    top: 3px;
+}
+/* .total */
+
+.mile-total-number {
+    font-size: 28px;
+    color: #444444;
+    font-weight: 800;
+    margin-right: 5px;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-  
-.nav-bar-item {
-    color: #9ba4b6;
+.profile-buttons-friends {
+    position: relative;
+    bottom: 64px;
 }
 
-.nav-bar-item:hover {
-    color: rgb(104, 104, 104);
+.edit-profile, .find-friends {
+    width: 50%;
+    height: 31px;
+    border-radius: 0px;
+    background: none;
+    border: none;
+    border-top: 1px solid #c3c3c3;
+    color: #2F98D9;
+    font-size: 13.2px;
+}
+
+.edit-profile {
+    border-right: 1px solid #c3c3c3;
+}
+
+.edit-profile:hover, .find-friends:hover {
+    color: rgb(111, 188, 236);
     cursor: pointer;
 }
 
-.recent-walk {
+.ua-box {
+    width: 298px;
+    height: 111px;
+    background-color: #f8f8f8;
     position: relative;
-    top: 220px;
-    left: -420px;
+    bottom: 47px;
+    border: 1px solid #c3c3c3;
+    box-shadow: 2.5px 2.5px #e0e0e0;
 }
 
-.recent-walk-header {
-    font-weight: bold;
-    font-size: 18px;
+.achievements {
+    width: 298px;
+    height: 62px;
+    background-color: #f8f8f8;
+    border: 1px solid #c3c3c3;
+    box-shadow: 2.5px 0px #e0e0e0;
+}
+
+.personal-statement {
+    width: 298px;
+    height: 81px;
+    background-color: #f8f8f8;
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    box-shadow: 2px 0px #e0e0e0;
+}
+
+.profile-about-me {
+    width: 298px;
+    height: 82px;
+    background-color: #f8f8f8;
+    border: 1px solid #c3c3c3;
+    border-top: none;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+}
+
+.triple-box {
+    position: relative;
+    bottom: 30px;
+}
+
+.gear-tracker {
+    width: 298px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    background-color: #f8f8f8;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+    position: relative;
+    bottom: 13px;
+}
+
+.challenges {
+    width: 298px;
+    height: 79px;
+    border: 1px solid #c3c3c3;
+    background-color: #f8f8f8;
+    box-shadow: 2.5px 2.5px #e0e0e0;
+    position: relative;
+    top: 4px;
 }

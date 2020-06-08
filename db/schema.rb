@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_211746) do
+ActiveRecord::Schema.define(version: 2020_06_07_160854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,16 +31,16 @@ ActiveRecord::Schema.define(version: 2020_06_05_211746) do
 
   create_table "walks", force: :cascade do |t|
     t.integer "walker_id", null: false
-    t.string "map", null: false
-    t.float "start_lat"
-    t.float "start_long"
-    t.float "end_lat"
+    t.string "location", null: false
+    t.float "start_lat", null: false
+    t.float "start_long", null: false
+    t.float "end_lat", null: false
     t.float "end_long", null: false
-    t.time "duration"
+    t.integer "duration"
     t.integer "distance"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "date"
     t.index ["walker_id"], name: "index_walks_on_walker_id"
   end
 
