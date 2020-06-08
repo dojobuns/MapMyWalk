@@ -2,7 +2,6 @@ import React from 'react';
 import WalkItem from './walk_items';
 import TotalWalks from './total_walks';
 import { selectAllWalks } from '../../../reducers/selectors';
-// import { debug } from 'webpack';
 
 class WalkDashboard extends React.Component {
     constructor(props){
