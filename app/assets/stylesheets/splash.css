@@ -122,7 +122,7 @@
 .walk-nonsense {
     position: relative;
     top: 240px;
-    left: 370px;
+    left: 100px;
 }
 
 .nonsense-header {
@@ -144,7 +144,7 @@
 .splash-examples {
     position: relative;
     bottom: 260px;
-    left: 800px;
+    left: 450px;
 }
 
 .splash-example-2 {
@@ -158,3 +158,16 @@
     bottom: 120px;
     right: 400px;
 }
+
+.splash-wonky {
+    position: relative;
+    bottom: 100px;
+}
+
+.splash-bottom-align {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 300px;
+}
+

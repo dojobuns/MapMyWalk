@@ -2,8 +2,8 @@
     height: 150px;
     width: 618px;
     position: relative;
-    top: 400px;
-    right: 465px;
+    top: 340px;
+    right: 395px;
 }
 
 .last-li {
@@ -12,8 +12,9 @@
 
 .total-walks {
     position: relative;
-    top: 250px;
-    left: -455px;
+    width: 618px;
+    top: 200px;
+    left: -395px;
     background-color: cadetblue;
     height: 445px;
 }
@@ -174,4 +175,48 @@
     display: flex;
     justify-content: center;
     margin-top: 5px;
+}
+
+.tab-toggle {
+    position: relative;
+    top: 129px;
+    right: 395px;
+}
+
+.tab-toggle > button {
+    width: 255px;
+    height: 45px;
+    border-radius: 1px;
+    
+    background-color: #f7f7f7;
+    font-family: "Open Sans", sans-serif;
+    color: #046AB2;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.activity-feed {
+    border: 1px solid #cacaca;
+}
+
+.all-day {
+    border: 1px solid #cacaca;
+}
+
+.my-dashboard{
+    border: 1px solid #cacaca;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 3px solid rgb(39, 140, 212);
+}
+
+.tab-toggle > button:hover {
+    background-color: white;
+    color: rgb(114, 181, 230);
+    cursor: pointer;
+}
+
+.tab-toggle > button:focus {
+    outline: none;
 }

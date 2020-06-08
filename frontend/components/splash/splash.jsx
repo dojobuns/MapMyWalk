@@ -41,26 +41,32 @@ class Splash extends React.Component{
                         </div>
                     </nav>
                 </div>
-                <div className='walk-nonsense'>
-                    <h1 className='nonsense-header'>Create Walks</h1>
-                    <p className='nonsense-text'>Be able to map out a walking path</p>
-                    <p className='nonsense-text'>anywhere in the world! Map out a </p>
-                    <p className='nonsense-text nonsense-last'>nice night stroll or comfortable afternoon walk!</p>
-                    <h1 className='nonsense-header'>Get Social</h1>
-                    <p className='nonsense-text'>Find friends on our site and walk </p>
-                    <p className='nonsense-text'>together. Cheer each other on. </p>
-                    <p className='nonsense-text nonsense-last'>Walking is awesome with a buddy!</p>
-                    <h1 className='nonsense-header'>Walk Faster</h1>
-                    <p className='nonsense-text'>Our site guarantees to be able to </p>
-                    <p className='nonsense-text'>speed up your walking time by at least </p>
-                    <p className='nonsense-text'>double the speed. Walk at paces that </p>
-                    <p className='nonsense-text nonsense-last'>you've never walked before!</p>
+                <div className='splash-bottom-align'>
+                    <div className='walk-nonsense'>
+                        <h1 className='nonsense-header'>Create Walks</h1>
+                        <p className='nonsense-text'>Be able to map out a walking path</p>
+                        <p className='nonsense-text'>anywhere in the world! Map out a </p>
+                        <p className='nonsense-text nonsense-last'>nice night stroll or comfortable afternoon walk!</p>
+                        <h1 className='nonsense-header'>Get Social</h1>
+                        <p className='nonsense-text'>Find friends on our site and walk </p>
+                        <p className='nonsense-text'>together. Cheer each other on. </p>
+                        <p className='nonsense-text nonsense-last'>Walking is awesome with a buddy!</p>
+                        <h1 className='nonsense-header'>Walk Faster</h1>
+                        <p className='nonsense-text'>Our site guarantees to be able to </p>
+                        <p className='nonsense-text'>speed up your walking time by at least </p>
+                        <p className='nonsense-text'>double the speed. Walk at paces that </p>
+                        <p className='nonsense-text nonsense-last'>you've never walked before!</p>
+                    </div>
+                    <div className='splash-examples'>
+                        <img src={window.splash_example_1} className='splash-example-1' width='360' alt=""/>
+                        <img src={window.splash_example_2} className='splash-example-2' width='430' alt=""/>
+                        <img src={window.logo} className='splash-example-3' width='470' alt=""/>
+                    </div>
+                    <div className='splash-wonky'>
+                        <img src={window.splash_wonky} alt=""/>
+                    </div>
                 </div>
-                <div className='splash-examples'>
-                    <img src={window.splash_example_1} className='splash-example-1' width='360' alt=""/>
-                    <img src={window.splash_example_2} className='splash-example-2' width='430' alt=""/>
-                    <img src={window.logo} className='splash-example-3' width='470' alt=""/>
-                </div>
+                
             </div>
         )
     }

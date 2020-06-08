@@ -14,8 +14,10 @@ class Footer extends React.Component {
                 <div className='footer'>
                     <div className='sections'>
                         <h1 className='footer-header'>SOCIAL</h1>
-                        <p>Like us on Facebook</p>
-                        <p>Follow us on Twitter</p>
+                        <a href="https://www.linkedin.com/in/cliffordyan/">Check my LinkedIn</a>
+                        <br/>
+                        <a href="https://github.com/dojobuns">My Github</a>
+                        <br/>
                         <p>MapMyWalk Blog</p>
                     </div>
                     <div className='sections'>

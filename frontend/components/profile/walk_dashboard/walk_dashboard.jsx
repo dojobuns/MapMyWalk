@@ -2,10 +2,12 @@ import React from 'react';
 import WalkItem from './walk_items';
 import TotalWalks from './total_walks';
 import { selectAllWalks } from '../../../reducers/selectors';
+// import { debug } from 'webpack';
 
 class WalkDashboard extends React.Component {
     constructor(props){
         super(props);
+        this.changeTab = this.changeTab.bind(this);
     }
 
     componentDidMount(){
@@ -14,31 +16,48 @@ class WalkDashboard extends React.Component {
         // this.props.fetchUsers();
     }
 
+    changeTab(e) {
+        let tabArr = ['activity-feed', 'my-dashboard', 'all-day'];
+        const i = tabArr.indexOf(e.currentTarget.className);
+        tabArr.splice(i, 1);
+        // debugger;
+        let activeTab = document.getElementByClassName(e.currentTarget.className);
+        let hideTab1 = document.getElementByClassName(tabArr[0]);
+        let hideTab2 = document.getElementsByClassName(tabArr[1]);
+        // debugger;
+    }
+
     render(){
         // debugger;
         let { walks } = this.props
         let recentWalk = 0;
         if(walks === undefined || Object.keys(walks).length === 0){
             recentWalk = this.props.emptyWalk;
-            // debugger;
         } else {
             walks = Object.values(walks);
             recentWalk = walks[walks.length - 1];
-            // debugger;
         }
 
-        // debugger;
+        
+
         return(
             <div>
+                <div className='tab-toggle'>
+                    <button className='activity-feed' onClick={this.changeTab}>ACTIVITY FEED</button>
+                    <button className='my-dashboard' onClick={this.changeTab}>MY DASHBOARD</button>
+                    <button className='all-day' onClick={this.changeTab}>24 / 7</button>
+                </div>
+            <div className='dashboard-stuff dashboard-toggle-2'>
                 <div className='total-walks'>
                     <TotalWalks walks={walks} />
                 </div>
-                    <div className='walk-dashboard-component'>
-                        <ul style={{ listStyle: "none inside" }}>
-                            <WalkItem recentWalk={recentWalk} />
-                        </ul>
-                    </div>
+                <div className='walk-dashboard-component'>
+                    <ul style={{ listStyle: "none inside" }}>
+                        <WalkItem recentWalk={recentWalk} />
+                    </ul>
+                </div>
             </div>
+            </div> 
         )
 
 

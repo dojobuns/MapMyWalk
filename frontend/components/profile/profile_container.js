@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     // debugger;
     return {
         currentUser: state.session.currentUser.user,
+        walks: state.entities.walks,
     }
 }
 
