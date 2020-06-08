@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
 
         // console.log(this.props.errors.responseJSON)
 
-        if(this.props.errors.responseJSON) {
+        if(Array.isArray(this.props.errors.responseJSON) ) {
             this.props.errors.responseJSON.forEach(error => {
                
                 error = JSON.stringify(error);
