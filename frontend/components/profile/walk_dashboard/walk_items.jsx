@@ -10,6 +10,8 @@ class WalkItem extends React.Component {
             `${recentWalk.duration} m`
         )
 
+        
+
         return (
             <div>
                 <h1 className='recent-walk-header'>RECENT WALK</h1>

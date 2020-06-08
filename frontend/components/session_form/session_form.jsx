@@ -40,6 +40,8 @@ class SessionForm extends React.Component {
         let emailError = '';
         let passwordError = '';
         let credentialError = '';
+        let birthdateError = '';
+        let genderError = '';
         // debugger;
 
         // console.log(this.props.errors.responseJSON)
@@ -51,24 +53,29 @@ class SessionForm extends React.Component {
 
                 if(error.includes('First')) {
 
-                    firstNameError = error;
-                    // console.log(firstNameError.length)
+                    firstNameError = 'First name is required'
                 } else if(error.includes('Last')) {
 
-                    lastNameError = error;
+                    lastNameError = 'Last name is required'
                 } else if(error.includes('Email')) {
 
-                    emailError = error;
+                    emailError = 'Email is required'
                 } else if(error.includes('Password')) {
 
-                    passwordError = error;
-                } else if(error.includes('credentials')) {
+                    passwordError = 'Password is required'
+                } else if(error.includes('or')) {
 
                     credentialError = error;
+                    credentialError = JSON.parse(credentialError)
+                } else if(error.includes('Dob')) {
+
+                    birthdateError = 'Birthdate is required'
+                } else if(error.includes('Gender')) {
+                    genderError = 'Gender is required'
                 }
             })
         }
-
+debugger;
         let name = '';
         let signupButton = '';
         let date = '';
@@ -79,26 +86,26 @@ class SessionForm extends React.Component {
             <span>
                 <input 
                     type="date" 
-                    className='dob' 
+                    className={birthdateError.length > 0 ? 'input-error' : 'dob'} 
                     value={this.state.dob}
                     onChange={this.update('dob')}
                 />
-
+                <p className='error'>{birthdateError}</p>
                 <br/>
 
                 <div className='male-label'>Male</div>
                 <div className='female-label'>Female</div>
 
                 <label className='radio-label male'>
-                    <input type="radio" className='custom-radios signup-radio-button' name="gender" id="male" value='m' onChange={this.update('gender')}></input>
+                    <input type="radio" className={genderError.length > 0 ? 'custom-radios-error' : 'custom-radios'} name="gender" id="male" value='m' onChange={this.update('gender')}></input>
                 </label>
 
                 <label className='radio-label'>
-                    <input type="radio" className='custom-radios signup-radio-button' name="gender" id="female" value='f' onChange={this.update('gender')}></input>
+                    <input type="radio" className={genderError.length > 0 ? 'custom-radios-error' : 'custom-radios'} name="gender" id="female" value='f' onChange={this.update('gender')}></input>
                 </label>
+                <p className='error'>{genderError}</p>
 
                 <br/>
-
             </span>
 
             signupButton =
@@ -129,7 +136,7 @@ class SessionForm extends React.Component {
                                 className={lastNameError.length > 0 ? 'input-error' : 'input-box-session'}
                             />
                         </label>
-                        <p className='error'>{lastNameError}</p>
+                       <p className='error'>{lastNameError}</p>
                         <br/>
                     </div>
         } else {
@@ -158,14 +165,14 @@ class SessionForm extends React.Component {
                 <br/>
                 <form onSubmit={this.handleSubmit}>
                     {name}
-                    
+                        <p className='error'>{credentialError}</p>
                     <label>
                         <input 
                             type="text" 
                             value={this.state.email}
                             placeholder=' Email'
                             onChange={this.update('email')}
-                            className={emailError.length > 0 || credentialError.length > 0 ? 'input-error' : 'input-box-session'}
+                            className={emailError.length > 0 ? 'input-error' : 'input-box-session'}
                         />
                     </label>
 
@@ -178,10 +185,10 @@ class SessionForm extends React.Component {
                             value={this.state.password}
                             placeholder=' Password'
                             onChange={this.update('password')}
-                            className={passwordError.length > 0 || credentialError.length > 0 ? 'input-error' : 'input-box-session'}
+                            className={passwordError.length > 0 ? 'input-error' : 'input-box-session'}
                         />
                     </label>
-                {passwordError.length === 0 ? <p className='error'>{credentialError}</p> : <p className='error'>{passwordError}</p>}
+                    <p className='error'>{passwordError}</p>
                     <br/>
                     {date}
                     <button type='submit' className='session-login-button'>{this.props.formType}</button>
