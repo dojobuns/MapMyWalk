@@ -64,6 +64,7 @@ class Splash extends React.Component{
                     </div>
                     <div className='splash-wonky'>
                         <img src={window.splash_wonky} alt=""/>
+                    <img src={window.logo} className='little-logo' alt=""/>
                     </div>
                 </div>
                 

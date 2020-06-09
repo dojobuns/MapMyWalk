@@ -14,6 +14,11 @@
     /* text-align: center; */
   }
 
+.footer-1 {
+    position: relative;
+    top: 330px;
+}
+
 .footer-route-image {
     position: relative;
     top: 70px;

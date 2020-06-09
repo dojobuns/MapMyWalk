@@ -1,7 +1,7 @@
 import React from 'react';
 import WalkDashBoardContainer from './walk_dashboard/walk_dashboard_container';
+import Footer1 from '../footer/footer_container'
 import { capitalize } from '../../util/helper_util';
-import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
     constructor(props){
@@ -43,12 +43,12 @@ class Profile extends React.Component {
                 </div>
                 <div className='ua-box'></div>
                 <div className='triple-box'>
-                    <div className='achievements'>achievement</div>
-                    <div className='personal-statement'>personal statement</div>
-                    <div className='profile-about-me'>profile about me</div>
+                    <div className='achievements'>ACHIEVEMENTS</div>
+                    <div className='personal-statement'>PERSONAL STATEMENT</div>
+                    <div className='profile-about-me'>ABOUT ME</div>
                 </div>
-                <div className='gear-tracker'>gear tracker</div>
-                <div className='challenges'>challenges</div>
+                <div className='gear-tracker'>GEAR TRACKER</div>
+                <div className='challenges'>CHALLENGES</div>
             </span>
         ) : (
             <span>
@@ -71,6 +71,9 @@ class Profile extends React.Component {
                     {display}
                     <br/>
                     {dashboard}
+                </div>
+                <div className='footer-1'>
+                    <Footer1 />
                 </div>
             </div>
         )

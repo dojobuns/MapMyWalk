@@ -10,10 +10,10 @@
 #  updated_at      :datetime         not null
 #  first_name      :string
 #  last_name       :string
-#  gender          :string           default("m")
 #  weight          :integer
 #  height          :integer
 #  dob             :string
+#  gender          :string
 #
 require 'test_helper'
 

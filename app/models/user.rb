@@ -10,10 +10,10 @@
 #  updated_at      :datetime         not null
 #  first_name      :string
 #  last_name       :string
-#  gender          :string           default("m")
 #  weight          :integer
 #  height          :integer
 #  dob             :string
+#  gender          :string
 #
 class User < ApplicationRecord
     validates :first_name, :last_name, :email, :password_digest, :session_token, presence: true

@@ -5,17 +5,19 @@ import {
 import WalkForm from './walk_form';
 
 const mapStateToProps = state => {
-    // debugger;
+    const d = new Date();
+    const month = d.getMonth();
+    const day = d.getDate();
+    const year = d.getFullYear();
+    const date = `${year}/${month+1}/${day}`;
     return {
         walk: {
             walker_id: state.session.currentUser.user.id,
             location: '',
-            duration: 0,
-            distance: 0,
-            start_lat: 0,
-            start_long: 0,
-            end_lat: 0,
-            end_long: 0,
+            date: date,
+            duration: '',
+            distance: '',
+            description: '',
         }
     }
 }

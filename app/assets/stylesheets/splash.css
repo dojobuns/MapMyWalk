@@ -171,3 +171,11 @@
     margin-left: 300px;
 }
 
+.little-logo {
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+    position: relative;
+    bottom: 130px;
+    right: 780px;
+}

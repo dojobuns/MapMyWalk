@@ -1,0 +1,16 @@
+.route-side-bar {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.walk-details {
+    background-color: #efefef;
+    color: #494949;
+    font-weight: 600;
+    width: 80%;
+    padding: 8px 34px;
+}
+
+.side-bar-walk-duration {
+    display: none
+}
