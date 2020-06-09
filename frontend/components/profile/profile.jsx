@@ -31,7 +31,7 @@ class Profile extends React.Component {
                 <h1 className='long-beach'>Long Beach, NY</h1>
                 <div className='profile-line-1'></div>
                 <div className='mile-total'>
-                    <div className='mile-total-number'>{totalDistance}</div>
+                    <div className='mile-total-number'>{totalDistance.toFixed(2)}</div>
                     <div className='total-miles-text'>
                         <div className='total-text'>TOTAL</div> 
                         <div className='miles-text'>MILES</div>

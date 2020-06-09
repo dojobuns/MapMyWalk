@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import RouteSideBar from './route_side_bar';
 import { createWalk } from '../../../actions/walks_actions';
 
@@ -26,4 +27,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RouteSideBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RouteSideBar));

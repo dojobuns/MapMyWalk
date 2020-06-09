@@ -4,6 +4,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Splash extends React.Component{
+
+    componentDidMount(){
+        const { currentUser, history } = this.props
+        if (currentUser) {
+            history.push('/profile');
+        }
+    }
     render(){
         return(
             <div className='front-page'>

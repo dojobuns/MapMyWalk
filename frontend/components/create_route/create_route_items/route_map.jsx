@@ -10,7 +10,7 @@ class RouteMap extends React.Component {
         this.duration = this.walk.duration;
         this.distance = this.walk.distance;
         this.calculateAndDisplayRoute = this.calculateAndDisplayRoute.bind(this);
-        this.state = {duration: 0, distance: 0};
+        this.state = { duration: 0, distance: 0 };
     }
     
     componentDidMount() {
@@ -64,9 +64,10 @@ class RouteMap extends React.Component {
             }, (response, status) => {
                 // debugger;
                 if (status === 'OK') {
-                    debugger;
-                    that.setState({duration: that.state.duration += (parseFloat((response.routes[0].legs[0].duration.text)))});
-                    that.setState({distance: that.state.duration += (parseFloat((response.routes[0].legs[0].distance.text)))});
+                    // debugger;
+                    that.setState({duration: that.state.duration += parseFloat(response.routes[0].legs[response.routes[0].legs.length - 1].duration.text.slice(0.4))});
+                    that.setState({distance: that.state.distance += parseFloat(response.routes[0].legs[response.routes[0].legs.length - 1].distance.text.slice(0.4))});
+                    // debugger;
                 directionsDisplay.setDirections(response);
                 } else {
                 window.alert('Directions request failed due to ' + status);
@@ -86,13 +87,14 @@ class RouteMap extends React.Component {
     };
     
     render() {
-        debugger;
+        // debugger;
         return(
             <div className='route-map-whole'>
                 <RouteSideBarContainer duration={this.state.duration} distance={this.state.distance} />
+                
                 <div className='map' ref={ map => this.mapNode = map }>
                 </div>
-                {/* <PanelContainer /> */}
+                <PanelContainer distance={this.state.distance} />
             </div>
         )
     }

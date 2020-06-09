@@ -4,6 +4,7 @@ class WalkItem extends React.Component {
     render() {
         const { recentWalk } = this.props;
         // debugger;
+
         const walkDuration = ( recentWalk.duration === '--' ) ? (
             recentWalk.duration
         ) : (

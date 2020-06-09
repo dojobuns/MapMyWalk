@@ -25,7 +25,7 @@ class TotalWalks extends React.Component {
                         DISTANCE
                     </div>
                     <div className='dashboard-numbers'>
-                        {totalDistance}
+                        {totalDistance.toFixed(2)}
                     </div>
                     <div className='dashboard-units'>
                         miles

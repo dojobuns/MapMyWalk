@@ -11,6 +11,57 @@
     padding: 8px 34px;
 }
 
-.side-bar-walk-duration {
+.side-bar-walk-duration, .side-bar-walk-distance {
     display: none
+}
+
+.side-bar-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.side-bar-walk-name {
+    margin-top: 10px;
+    height: 30px;
+    width: 250px;
+    font-size: 14px;
+    border: 1px solid #b8b8b8;
+    border-radius: 5px;
+}
+
+.side-bar-walk-date, .side-bar-walk-description {
+    font-size: 14px;
+    border: 1px solid #b8b8b8;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.side-bar-walk-date {
+    height: 35px;
+}
+
+.side-bar-walk-description {
+    height: 80px;
+    position: relative;
+    bottom: 20px;
+}
+
+.side-bar-walk-save {
+    color: white;
+    background-color: #ff8f1f;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    height: 30px;
+    width: 130px;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    left: 105px;
+    box-shadow: 0px 2.5px #cfcece;
+}
+
+.side-bar-walk-save:hover {
+    background-color: #db7815;
+    cursor: pointer;
 }

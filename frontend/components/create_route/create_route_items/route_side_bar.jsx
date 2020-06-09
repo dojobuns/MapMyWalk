@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Panel from './panel';
 
 class RouteSideBar extends React.Component {
     constructor(props){
@@ -11,8 +11,9 @@ class RouteSideBar extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.state = {walk: this.state};
-        debugger;
+        // debugger;
         this.props.createWalk(this.state)
+            .then(() => this.props.history.push(`/profile`));
     }
 
     update(field) {
@@ -20,8 +21,12 @@ class RouteSideBar extends React.Component {
     }
 
     render() {
-        debugger;
-        const { duration, distance } = this.props
+        // debugger;
+        const { duration, distance } = this.props;
+        
+        this.state.duration = duration;
+        this.state.distance = distance;
+        
         return (
             <div className='route-side-bar'>
                 <div className='walk-details'>
@@ -38,24 +43,22 @@ class RouteSideBar extends React.Component {
                             </label>
                             <br/>
                             <label>
-                                <input type="text" className='side-bar-walk-duration' value={duration} placeholder='mm' onChange={this.update('duration')}/>
+                                <input type="text" className='side-bar-walk-duration' value={this.state.duration} placeholder='mm' onChange={this.update('duration')}/>
                             </label>
                             <br/>
                             <label>
-                                <div>Distance </div>
-                                <input type="text" className='side-bar-walk-distance' value={distance} onChange={this.update('distance')}/>
+                                <input type="text" className='side-bar-walk-distance' value={this.state.distance} onChange={this.update('distance')}/>
                             </label>
                             <br/>
                             <label>
-                                <div>How did it go? </div>
-                                <textarea className='side-bar-walk-description' value={this.state.description} onChange={this.update('description')}/>
+                                <textarea className='side-bar-walk-description' value={this.state.description} placeholder='How did it go?' onChange={this.update('description')}/>
                             </label>
                             <br/>
                         </div>
-                        <Link to='/profile'>
-                            <button type='submit' className='side-bar-walk-save'>SAVE WALK</button>
-                        </Link>
+                        <button type='submit' className='side-bar-walk-save'>SAVE WALK</button>
                     </form>
+
+                {/* <Panel /> */}
             </div>
         )
     }
