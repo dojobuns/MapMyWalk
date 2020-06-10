@@ -30,6 +30,34 @@ class User < ApplicationRecord
         foreign_key: :walker_id,
         class_name: :Walk
 
+    has_many :senders,
+        foreign_key: :requestee_id,
+        class_name: :FriendRequest
+
+    has_many :receivers,
+        foreign_key: :requester_id,
+        class_name: :FriendRequest
+
+    # Eric(1) is friending Tiff(2)
+    # requester_id = 1 , requestee_id = 2
+
+    def friends
+        @users = User.all
+        @friends = {}
+
+        self.senders.each do |sender|
+            if sender.status
+                @friends[sender.requester_id] = @users.find(sender.requester_id)
+            end
+        end
+        self.receivers.each do |receiver|
+            if receiver.status
+                @friends[receiver.requestee_id] = @users.find(receiver.requestee_id)
+            end
+        end
+        @friends
+    end
+
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
         return nil unless user
