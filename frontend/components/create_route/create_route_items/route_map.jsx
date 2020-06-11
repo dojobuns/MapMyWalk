@@ -132,6 +132,10 @@ class RouteMap extends React.Component {
                 if(that.markers.length > 1) {
                     that.calculateAndDisplayRoute(that.directionsService, that.directionsDisplay);
                 }
+                if(this.markers.length > 2){
+                    // debugger;
+                    this.markers[this.markers.length - 2].setMap(null)
+                }
             };
         })
         // .then(() => that.markers.push(that.snappedMarker))
@@ -174,10 +178,7 @@ class RouteMap extends React.Component {
 // // debugger;
 //         this.markers.push(marker);
 // ///////////////////////////////////////////////////////////////////////////
-//         if(this.markers.length > 2){
-//             // debugger;
-//             this.markers[this.markers.length - 2].setMap(null)
-//         }
+        
     }
     
     removeMarker() {
