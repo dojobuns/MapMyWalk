@@ -9,6 +9,7 @@ import CreateRouteContainer from './create_route/create_route_container';
 import WalkFormContainer from './walk_form/walk_form_container';
 import NavJrContainer1 from './nav_jr/nav_jr_container_1';
 import FooterContainer from './footer/footer_container';
+import FriendSearchContainer from "./friend_form/friend_search_container";
 
 import { 
   AuthRoute,
@@ -27,6 +28,7 @@ const App = () => (
     <AuthRoute exact path='/signup' component={SignUpFormContainer} />
     <ProtectedRoute exact path='/profile' component={ProfileContainer} />
     <ProtectedRoute path='/profile' component={NavJrContainer} />
+    <ProtectedRoute path='/profile/friends/find' component={FriendSearchContainer} />
     <ProtectedRoute path='/route/create' component={CreateRouteContainer} />
     <ProtectedRoute path='/walk' component={NavJrContainer1} />
     <ProtectedRoute path='/walk/create' component={WalkFormContainer} />

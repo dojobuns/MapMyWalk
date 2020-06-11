@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Panel extends React.Component {
     constructor(props){
@@ -7,7 +8,8 @@ class Panel extends React.Component {
     }
 
     render(){
-        const { distance } = this.props;
+        // debugger;
+        const { distance, removeMarker, removeAll } = this.props;
         this.state.distance = distance;
         this.state.distance = (this.state.distance === 0) ? (
             this.state.distance
@@ -22,6 +24,10 @@ class Panel extends React.Component {
                     <div className='panel-distance-number'>
                         <div className='panel-distance-actual-number'>{this.state.distance}</div>
                         <div>MI</div>
+                    </div>
+                    <div className='panel-buttons'>
+                        <button onClick={removeMarker} className='remove-marker'><FontAwesomeIcon icon={'undo'} className='undo' />Undo</button>
+                        <button onClick={removeAll} className='clear-map'><FontAwesomeIcon icon={'times'} className='times' />Clear</button>
                     </div>
             </div>
         )

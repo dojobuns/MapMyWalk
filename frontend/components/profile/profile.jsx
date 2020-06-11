@@ -2,6 +2,7 @@ import React from 'react';
 import WalkDashBoardContainer from './walk_dashboard/walk_dashboard_container';
 import Footer1 from '../footer/footer_container'
 import { capitalize } from '../../util/helper_util';
+import { Link } from 'react-router-dom';
 
 class Profile extends React.Component {
     constructor(props){
@@ -9,8 +10,8 @@ class Profile extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchWalks()
-        // debugger;
+        this.props.fetchWalks();
+        this.props.fetchUsers();
     }
 
     render(){
@@ -39,7 +40,9 @@ class Profile extends React.Component {
                 </div>
                 <div className='profile-buttons-friends'>
                     <button className='edit-profile'>Edit Profile</button>
-                    <button className='find-friends'>Find Friends</button>
+                    <Link to='/profile/friends/find'>
+                        <button className='find-friends'>Find Friends</button>
+                    </Link>
                 </div>
                 <div className='ua-box'></div>
                 <div className='triple-box'>

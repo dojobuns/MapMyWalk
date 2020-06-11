@@ -10,7 +10,12 @@ class RouteMap extends React.Component {
         this.duration = this.walk.duration;
         this.distance = this.walk.distance;
         this.calculateAndDisplayRoute = this.calculateAndDisplayRoute.bind(this);
-        this.state = { duration: 0, distance: 0 };
+        this.removeMarker = this.removeMarker.bind(this);
+        this.removeAll = this.removeAll.bind(this);
+        this.state = { duration: 0, distance: 0, lastDurationLeg: 0, lastDistanceLeg: 0 };
+        this.remove = false;
+        this.reset = false;
+        this.roadSnappedLatLng = 0;
     }
     
     componentDidMount() {
@@ -42,9 +47,13 @@ class RouteMap extends React.Component {
 
         google.maps.event.addListener(this.map, 'click', (e) => {
             // var path = this.poly.getPath();
+            // debugger;
             // path.push(e.latLng)
             this.addMarker(e.latLng);
-            this.calculateAndDisplayRoute(this.directionsService, this.directionsDisplay);
+            // this.directionsDisplay.setMap(this.map);
+            if(this.markers.length > 1) {
+                this.calculateAndDisplayRoute(this.directionsService, this.directionsDisplay);
+            }
             // debugger;
         });
         
@@ -54,38 +63,131 @@ class RouteMap extends React.Component {
         let that = this;
         let steps = this.markers.slice(1, this.markers.length - 1 ).map(marker => ({location: marker.position, stopover: true})) || [];
         // debugger;
-        if(this.markers.length > 1) {
+        directionsService.route({
+            origin: this.markers[0].position,
+            waypoints: steps,
+            destination: this.markers[this.markers.length - 1].position,
+            travelMode: 'WALKING'
+        }, (response, status) => {
             // debugger;
-            directionsService.route({
-                origin: this.markers[0].position,
-                waypoints: steps,
-                destination: this.markers[this.markers.length - 1].position,
-                travelMode: 'WALKING'
-            }, (response, status) => {
+            if (status === 'OK') {
                 // debugger;
-                if (status === 'OK') {
+                let constRouteLeg = response.routes[0].legs.length - 1;
+                let lastDurationRouteLeg = parseFloat(response.routes[0].legs[constRouteLeg].duration.text.slice(0.4));
+                let lastDistanceRouteLeg = parseFloat(response.routes[0].legs[constRouteLeg].distance.text.slice(0.4))
+                // debugger;
+                if(response.routes[0].legs[constRouteLeg].distance.text.includes('ft')) {
                     // debugger;
-                    that.setState({duration: that.state.duration += parseFloat(response.routes[0].legs[response.routes[0].legs.length - 1].duration.text.slice(0.4))});
-                    that.setState({distance: that.state.distance += parseFloat(response.routes[0].legs[response.routes[0].legs.length - 1].distance.text.slice(0.4))});
-                    // debugger;
-                directionsDisplay.setDirections(response);
-                } else {
-                window.alert('Directions request failed due to ' + status);
+                    lastDistanceRouteLeg = parseFloat((lastDistanceRouteLeg / 5280).toFixed(2));
                 }
-            });
-        }
+
+                if(response.routes[0].legs[constRouteLeg].duration.text.includes('hour')){
+                    lastDurationRouteLeg = parseFloat((lastDurationRouteLeg * 60).toFixed(2));
+                }
+
+                if(that.remove){
+                    // debugger;
+                    that.setState({duration: that.state.duration -= that.state.lastDurationLeg});
+                    that.setState({distance: that.state.distance -= that.state.lastDistanceLeg});
+                    this.remove = false;
+                    // debugger;
+                } else {
+                        // debugger;
+                        that.setState({duration: that.state.duration += lastDurationRouteLeg});
+                        that.setState({distance: that.state.distance += lastDistanceRouteLeg});
+                        // debugger;
+                }
+                // debugger;
+                that.setState({lastDurationLeg: lastDurationRouteLeg, lastDistanceLeg: lastDistanceRouteLeg});
+                
+                if(that.reset){
+                    that.directionsDisplay.setMap(that.map)
+                    that.reset = false;
+                }
+                // debugger;
+            directionsDisplay.setDirections(response);
+            } else {
+            window.alert('Directions request failed due to ' + status);
+            }
+        });
     }
 
     addMarker(coords){
+//         let that = this;
+//         // let marker1 = new google.maps.Marker({
+//         //     position: coords,
+//         //     map: this.map,
+//         //     icon: window.logo_marker
+//         // });
+//         debugger;
+//         this.directionsService.route({
+//             origin: coords,
+//             destination: coords,
+//             travelMode: 'WALKING'
+//         }, (response, status) => {
+//             debugger;
+//             if(status === 'OK') {
+//                 debugger;
+//                 that.roadSnappedLatLng = response.routes[0].legs[0].start_location
+//             }
+//         })
+// debugger;
+//         let snappedMarker = new google.maps.Marker({
+//             position: this.roadSnappedLatLng,
+//             map: this.map,
+//             icon: window.logo_marker
+//         });
+
+//         this.markers.push(snappedMarker);
+//////////////////////////////////////////////////////////////////////////
         let marker = new google.maps.Marker({
             position: coords,
             map: this.map,
             icon: window.logo_marker
         });
-
+// debugger;
         this.markers.push(marker);
+///////////////////////////////////////////////////////////////////////////
+        if(this.markers.length > 2){
+            // debugger;
+            this.markers[this.markers.length - 2].setMap(null)
+        }
     };
     
+    removeMarker() {
+        // debugger;
+        if(this.markers.length === 0) return;
+        this.markers[this.markers.length - 1].setMap(null);
+        this.markers.pop();
+        this.remove = true;
+
+        this.markers[this.markers.length - 1].setMap(this.map);
+
+        // if(this.markers.length === 1){
+            // debugger;
+            // this.directionsDisplay.setMap(null);
+            // this.directionsDisplay = null;
+        // };
+        // debugger;
+        this.calculateAndDisplayRoute(this.directionsService, this.directionsDisplay);
+    }
+    
+    removeAll() {
+        // debugger;
+        if(this.markers.length === 0) return;
+        this.markers.forEach(marker => {
+            marker.setMap(null)
+            // this.calculateAndDisplayRoute(this.directionsService, this.directionsDisplay);
+        })
+        this.markers = [];
+
+        this.directionsDisplay.setMap(null); // REMOVE THE LINES FROM THE DISPLAY????
+
+        this.reset = true;
+        // debugger;
+        this.setState({ duration: 0, distance: 0, lastDurationLeg: 0, lastDistanceLeg: 0 })
+    }
+
     render() {
         // debugger;
         return(
@@ -94,7 +196,7 @@ class RouteMap extends React.Component {
                 
                 <div className='map' ref={ map => this.mapNode = map }>
                 </div>
-                <PanelContainer distance={this.state.distance} />
+                <PanelContainer distance={this.state.distance} removeMarker={this.removeMarker} removeAll={this.removeAll} />
             </div>
         )
     }

@@ -47,3 +47,49 @@
 .panel-distance-actual-number {
     margin-right: 5px;
 }
+
+.remove-marker {
+    height: 40px;
+    width: 60px;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(195, 195, 195);
+}
+
+.undo {
+    margin-top: 2px;
+    color: green;
+    font-size: 20px;
+}
+
+.clear-map {
+    height: 40px;
+    width: 60px;
+    color: black;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(195, 195, 195);
+}
+
+.times {
+    margin-top: 2px;
+    color: red;
+    font-size: 20px;
+}
+
+.clear-map:hover, .remove-marker:hover {
+    cursor: pointer;
+}
+
+.panel-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    bottom: 70px;
+}
