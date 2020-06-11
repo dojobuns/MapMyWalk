@@ -12,9 +12,11 @@ class RouteMap extends React.Component {
         this.calculateAndDisplayRoute = this.calculateAndDisplayRoute.bind(this);
         this.removeMarker = this.removeMarker.bind(this);
         this.removeAll = this.removeAll.bind(this);
+        this.addMarker = this.addMarker.bind(this);
         this.state = { duration: 0, distance: 0, lastDurationLeg: 0, lastDistanceLeg: 0 };
         this.remove = false;
         this.reset = false;
+        this.snappedMarker = 0;
         this.roadSnappedLatLng = 0;
     }
     
@@ -28,7 +30,7 @@ class RouteMap extends React.Component {
         };
 
         this.directionsService = new google.maps.DirectionsService(); 
-
+        // debugger;
         // this.poly = new google.maps.Polyline({
         //     strokeColor: '#000000',
         //     strokeOpacity: 1.0,
@@ -50,10 +52,7 @@ class RouteMap extends React.Component {
             // debugger;
             // path.push(e.latLng)
             this.addMarker(e.latLng);
-            // this.directionsDisplay.setMap(this.map);
-            if(this.markers.length > 1) {
-                this.calculateAndDisplayRoute(this.directionsService, this.directionsDisplay);
-            }
+            // this.directionsDisplay.setMap(this.map);     
             // debugger;
         });
         
@@ -62,7 +61,7 @@ class RouteMap extends React.Component {
     calculateAndDisplayRoute(directionsService, directionsDisplay) {
         let that = this;
         let steps = this.markers.slice(1, this.markers.length - 1 ).map(marker => ({location: marker.position, stopover: true})) || [];
-        // debugger;
+        debugger;
         directionsService.route({
             origin: this.markers[0].position,
             waypoints: steps,
@@ -113,6 +112,33 @@ class RouteMap extends React.Component {
     }
 
     addMarker(coords){
+        let that = this;
+        // debugger;
+        this.directionsService.route({
+            origin: coords,
+            destination: coords,
+            travelMode: 'WALKING'
+        }, (response, status) => {
+            // debugger;
+            if(status === 'OK') {
+                // debugger;
+                that.snappedMarker = new google.maps.Marker({
+                    position: response.routes[0].legs[0].start_location,
+                    map: that.map,
+                    icon: window.logo_marker
+                })
+                that.markers.push(that.snappedMarker);
+                // debugger;
+                if(that.markers.length > 1) {
+                    that.calculateAndDisplayRoute(that.directionsService, that.directionsDisplay);
+                }
+            };
+        })
+        // .then(() => that.markers.push(that.snappedMarker))
+// debugger;
+        // window.setTimeout((() => that.markers.push(that.snappedMarker)), 2000)
+        
+        ///////////////////////////////////////////////////////////////////
 //         let that = this;
 //         // let marker1 = new google.maps.Marker({
 //         //     position: coords,
@@ -140,19 +166,19 @@ class RouteMap extends React.Component {
 
 //         this.markers.push(snappedMarker);
 //////////////////////////////////////////////////////////////////////////
-        let marker = new google.maps.Marker({
-            position: coords,
-            map: this.map,
-            icon: window.logo_marker
-        });
-// debugger;
-        this.markers.push(marker);
-///////////////////////////////////////////////////////////////////////////
-        if(this.markers.length > 2){
-            // debugger;
-            this.markers[this.markers.length - 2].setMap(null)
-        }
-    };
+//         let marker = new google.maps.Marker({
+//             position: coords,
+//             map: this.map,
+//             icon: window.logo_marker
+//         });
+// // debugger;
+//         this.markers.push(marker);
+// ///////////////////////////////////////////////////////////////////////////
+//         if(this.markers.length > 2){
+//             // debugger;
+//             this.markers[this.markers.length - 2].setMap(null)
+//         }
+    }
     
     removeMarker() {
         // debugger;

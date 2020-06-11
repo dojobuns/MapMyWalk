@@ -12,8 +12,7 @@ class NavJr extends React.Component {
                     <Link to='/walk/create'>
                         <button className='log-workout-button nav-jr-button btn'>Log Workout</button>
                     </Link>
-                    <button className='import-workout-button nav-jr-button btn'>Import Workout</button>
-                    <button className='create-a-goal nav-jr-button btn'>Create a Goal</button>
+                    
                 </div>
                 <div className='nav-jr-line'></div>
             </div>
