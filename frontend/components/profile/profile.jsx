@@ -1,5 +1,6 @@
 import React from 'react';
 import WalkDashBoardContainer from './walk_dashboard/walk_dashboard_container';
+import Footer1 from '../footer/footer_container'
 import { capitalize } from '../../util/helper_util';
 import { Link } from 'react-router-dom';
 
@@ -9,8 +10,8 @@ class Profile extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchWalks()
-        // debugger;
+        this.props.fetchWalks();
+        this.props.fetchUsers();
     }
 
     render(){
@@ -31,7 +32,7 @@ class Profile extends React.Component {
                 <h1 className='long-beach'>Long Beach, NY</h1>
                 <div className='profile-line-1'></div>
                 <div className='mile-total'>
-                    <div className='mile-total-number'>{totalDistance}</div>
+                    <div className='mile-total-number'>{totalDistance.toFixed(2)}</div>
                     <div className='total-miles-text'>
                         <div className='total-text'>TOTAL</div> 
                         <div className='miles-text'>MILES</div>
@@ -39,16 +40,18 @@ class Profile extends React.Component {
                 </div>
                 <div className='profile-buttons-friends'>
                     <button className='edit-profile'>Edit Profile</button>
-                    <button className='find-friends'>Find Friends</button>
+                    <Link to='/profile/friends/find'>
+                        <button className='find-friends'>Find Friends</button>
+                    </Link>
                 </div>
                 <div className='ua-box'></div>
                 <div className='triple-box'>
-                    <div className='achievements'>achievement</div>
-                    <div className='personal-statement'>personal statement</div>
-                    <div className='profile-about-me'>profile about me</div>
+                    <div className='achievements'>ACHIEVEMENTS</div>
+                    <div className='personal-statement'>PERSONAL STATEMENT</div>
+                    <div className='profile-about-me'>ABOUT ME</div>
                 </div>
-                <div className='gear-tracker'>gear tracker</div>
-                <div className='challenges'>challenges</div>
+                <div className='gear-tracker'>GEAR TRACKER</div>
+                <div className='challenges'>CHALLENGES</div>
             </span>
         ) : (
             <span>
@@ -71,6 +74,9 @@ class Profile extends React.Component {
                     {display}
                     <br/>
                     {dashboard}
+                </div>
+                <div className='footer-1'>
+                    <Footer1 />
                 </div>
             </div>
         )

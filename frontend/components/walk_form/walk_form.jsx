@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/footer_container'
 
 class WalkForm extends React.Component {
     constructor(props){
@@ -9,7 +10,18 @@ class WalkForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        // debugger;
+        const d = new Date(this.state.date);
+        // debugger;
+        const month = d.getMonth();
+        const day = d.getDate();
+        const year = d.getFullYear();
+        const date = `${month+1}/${day}/${year}`;
+
+        this.state.date = date;
+
         this.state = {walk: this.state};
+
         // debugger;
         this.props.createWalk(this.state)
             .then(() => this.props.history.push(`/profile`));
@@ -22,43 +34,52 @@ class WalkForm extends React.Component {
     render() {
         // debugger;
         return (
-            <div className='walk-form'>
-                <h1>WALK FORM</h1>
-                <br/>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        location: <input type="text" value={this.state.location} onChange={this.update('location')}/>
-                    </label>
+            <div>
+                <div className='walk-form'>
+                    <div className='log-header-container'>
+                        <h1 className='log-header'>LOG A WALK</h1>
+                    </div>
                     <br/>
-                    <label>
-                        Date: <input type="date" value={this.state.date} onChange={this.update('date')}/>
-                    </label>
+                    <div className='log-sub-header-container'>
+                    <img src={window.logo} className='log-sub-header-logo' width='70' alt=""/>
+                    <div className='log-sub-header-1'>Track all of your walks here! Be able to track date, time and distance for a better</div>
+                    </div>
+                    <div className='log-sub-header-2'>walk experience! Add details below to record how your stroll went!</div>
                     <br/>
-                    <label>
-                        Duration: <input type="text" value={this.state.duration} onChange={this.update('duration')}/>
-                    </label>
-                    <br/>
-                    <label>
-                        Distance: <input type="text" value={this.state.distance} onChange={this.update('distance')}/>
-                    </label>
-                    <br/>
-                    <label>
-                        Starting Latitude: <input type="text" value={this.state.start_lat} onChange={this.update('start_lat')}/>
-                    </label>
-                    <br/>
-                    <label>
-                        Starting Longitude: <input type="text" value={this.state.start_long} onChange={this.update('start_long')}/>
-                    </label>
-                    <br/>
-                    <label>
-                        Ending Latitude: <input type="text" value={this.state.end_lat} onChange={this.update('end_lat')}/>
-                    </label>
-                    <br/>
-                    <label>
-                        Ending Longitude: <input type="text" value={this.state.end_long} onChange={this.update('end_long')}/>
-                    </label>
-                    <button type='submit'>Log Workout</button>
-                </form>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className='log-form'>
+                            <div className='log-form-group-1'>
+                                <label>
+                                    <div>Walk name</div>
+                                    <input type="text" className='log-walk-name' value={this.state.location} onChange={this.update('location')}/>
+                                </label>
+
+                                <label>
+                                    <div>Date </div>
+                                    <input type="date" className='log-walk-date' value={this.state.date} onChange={this.update('date')}/>
+                                </label>
+                            </div>
+                            <br/>
+                            <label>
+                                <div>Duration</div> 
+                                <input type="text" className='log-walk-duration' value={this.state.duration} placeholder='mm' onChange={this.update('duration')}/>
+                            </label>
+                            <br/>
+                            <label>
+                                <div>Distance </div>
+                                <input type="text" className='log-walk-distance' value={this.state.distance} onChange={this.update('distance')}/>
+                            </label>
+                            <br/>
+                            <label>
+                                <div>How did it go? </div>
+                                <textarea className='log-walk-description' value={this.state.description} onChange={this.update('description')}/>
+                            </label>
+                            <br/>
+                        </div>
+                        <button type='submit' className='log-walk-save'>SAVE</button>
+                    </form>
+                </div>
+                <Footer />
             </div>
         )
     }

@@ -1,7 +1,7 @@
 class Api::WalksController < ApplicationController
     def index
-        # debugger;
         @walks = Walk.all
+        # debugger;
         @user = current_user;
         render "api/walks/index"
     end
@@ -11,7 +11,7 @@ class Api::WalksController < ApplicationController
         @user = User.find(@walk.walker_id)
 
         if @walk.save
-            render "api/walks/index"
+            render "api/walks/show"
         else
             render json: ['Missing Info Somewhere'], status: 422
         end
@@ -27,6 +27,6 @@ class Api::WalksController < ApplicationController
 
     def walk_params
         # debugger;
-        params.require(:walk).permit(:walker_id, :location, :date, :duration, :distance, :start_lat, :start_long, :end_lat, :end_long)
+        params.require(:walk).permit(:walker_id, :location, :date, :duration, :distance, :description)
     end
 end

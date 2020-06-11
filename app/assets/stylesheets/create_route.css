@@ -4,18 +4,21 @@
 }
 
 .route-side-bar {
-    height: calc(100vh - 83px);
+    height: calc(100vh - 92px);
     width: 340px;
-    background-color: brown;
+    background-color: white;
+    border-right: 2px solid #777777;
+    border-top: 1px solid #777777;
     position: relative;
     top: 37px;
 }
 
-.route-map {
-    height: calc(100vh - 70px);
-    width: calc(168.6vh);
+.map {
+    height: calc(100vh - 91px);
+    width: calc(168.6vh - 2px);
     position: relative;
     top: 37px;
+    z-index: 1;
     background-color: aquamarine;
 }
 
@@ -30,6 +33,11 @@
     width: calc(168.6vh);
 }
 
-.route-map:hover {
+.map:hover {
     cursor: crosshair;
+}
+
+.route-map-whole {
+    display: flex;
+    flex-direction: row;
 }

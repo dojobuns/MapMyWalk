@@ -2,8 +2,9 @@
     display: flex; 
     justify-content: center;
     position: relative;
-    top: 100px;
-    left: 150px;
+    top: 101px;
+    left: 76px;
+    font-family: "Open Sans", sans-serif
 }
 
 .profile-display {
@@ -105,29 +106,38 @@
 }
 
 .achievements {
-    width: 298px;
-    height: 62px;
+    width: 254px;
+    height: 18px;
+    padding: 22px 22px;
     background-color: #f8f8f8;
     border: 1px solid #c3c3c3;
     box-shadow: 2.5px 0px #e0e0e0;
+    color: #999999;
+    font-size: 12px;
 }
 
 .personal-statement {
-    width: 298px;
-    height: 81px;
+    width: 258px;
+    height: 41px;
+    padding: 10px 20px;
     background-color: #f8f8f8;
     border: 1px solid #c3c3c3;
     border-top: none;
     box-shadow: 2px 0px #e0e0e0;
+    color: #999999;
+    font-size: 12px;
 }
 
 .profile-about-me {
-    width: 298px;
-    height: 82px;
+    width: 258px;
+    height: 42px;
+    padding: 10px 20px;
     background-color: #f8f8f8;
     border: 1px solid #c3c3c3;
     border-top: none;
     box-shadow: 2.5px 2.5px #e0e0e0;
+    color: #999999;
+    font-size: 12px;
 }
 
 .triple-box {
@@ -136,21 +146,27 @@
 }
 
 .gear-tracker {
-    width: 298px;
-    height: 100px;
+    width: 258px;
+    height: 60px;
+    padding: 20px 20px;
     border: 1px solid #c3c3c3;
     background-color: #f8f8f8;
     box-shadow: 2.5px 2.5px #e0e0e0;
     position: relative;
     bottom: 13px;
+    color: #999999;
+    font-size: 12px;
 }
 
 .challenges {
-    width: 298px;
-    height: 79px;
+    width: 258px;
+    height: 59px;
+    padding: 20px 20px;
     border: 1px solid #c3c3c3;
     background-color: #f8f8f8;
     box-shadow: 2.5px 2.5px #e0e0e0;
     position: relative;
     top: 4px;
+    color: #999999;
+    font-size: 12px;
 }

@@ -6,7 +6,7 @@ class CreateRoute extends React.Component {
     render(){
         return(
         <div className='create-route-component'>
-            <RouteSideBarContainer />
+            
             <RouteMapContainer />
         </div>
         )

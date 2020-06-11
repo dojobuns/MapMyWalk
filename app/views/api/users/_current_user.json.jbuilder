@@ -6,7 +6,7 @@ end
 json.walks do
     user.walks.each do |walk|
         json.set! walk.id do
-            json.extract! walk, :id, :walker_id, :location, :start_lat, :start_long, :end_lat, :end_long, :duration, :distance, :date
+            json.extract! walk, :id, :walker_id, :location, :duration, :distance, :date, :description
         end
     end
 end

@@ -3,18 +3,24 @@
     justify-content: center;
     background-color:#f0f2f4;
     position: relative;
-    bottom: 610px;
+    bottom: 1067px;
     height: 100px;
     border-top: 1px solid#d3d6dc;
     border-bottom: 1px solid #d3d6dc;
 }
 
 .nav-jr-line {
-    width: 1900px;
+    width: 100%;
     border-bottom: 2px solid #b3b3b3;
     position: relative;
-    bottom: 671px;
-    z-index: 1;
+    bottom: 1128px;
+}
+
+.nav-jr-line-1 {
+    width: 100%;
+    border-bottom: 2px solid #b3b3b3;
+    position: relative;
+    bottom: 26px;
 }
 
 .nav-jr-1 {
@@ -36,7 +42,7 @@
     padding: 14px 28px;
     font-size: 14px;
     height: 42px;
-    width: 236px;
+    width: 436px;
     cursor: pointer;
 }
 

@@ -57,4 +57,7 @@ export const fetchCurrentUser = userId => dispatch => sessionAPIUtil.fetchUser(u
     .then(user => dispatch(receiveCurrentUser(user)));
 
 export const fetchUsers = () => dispatch => sessionAPIUtil.fetchUsers()
-    .then(users => dispatch(receiveUsers(users)));
+    .then(users => {
+        // debugger;
+        return dispatch(receiveUsers(users))
+    });

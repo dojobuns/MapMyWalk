@@ -75,7 +75,7 @@ class SessionForm extends React.Component {
                 }
             })
         }
-debugger;
+// debugger;
         let name = '';
         let signupButton = '';
         let date = '';

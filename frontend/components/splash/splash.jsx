@@ -4,19 +4,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class Splash extends React.Component{
+
+    componentDidMount(){
+        const { currentUser, history } = this.props
+        if (currentUser) {
+            history.push('/profile');
+        }
+    }
     render(){
         return(
             <div className='front-page'>
-                <div className='ashyo-fp'>
-                    
+                <div className='ashyo-fp'>        
                     <img src={window.ash_yo} alt="walking" width='1375'/>
-                    <nav>
+
                         <div className='ash-yo-info'>
                             <h1 className='own-every-step'>OWN EVERY STEP</h1>
                             
                             <h1 className='line-1'>____</h1>
                             <h1 className='line-2'>____</h1>
-                            
+                        <div className='splash-text-all'>
                             <div className='splash-text-1'>
                                 <p>The best walk tracking experience,</p>
                             </div>
@@ -26,12 +32,14 @@ class Splash extends React.Component{
                             <div className='splash-text-3'>
                                 <p>coding language, Ruby.</p>
                             </div>
+                        </div>   
 
                             <Link to="/signup">
                                 <button className='signup-button-splash'>
                                     SIGN UP
                                 </button>
                             </Link>
+                        <div className='splash-pic-bottom'>
                             <p className='already-walker'>Already a walker?</p>
                             <Link to="/login">
                                 <button className='login-button-splash'>
@@ -39,7 +47,7 @@ class Splash extends React.Component{
                                 </button>
                             </Link>
                         </div>
-                    </nav>
+                        </div>
                 </div>
                 <div className='splash-bottom-align'>
                     <div className='walk-nonsense'>
@@ -64,6 +72,7 @@ class Splash extends React.Component{
                     </div>
                     <div className='splash-wonky'>
                         <img src={window.splash_wonky} alt=""/>
+                    <img src={window.logo} className='little-logo' alt=""/>
                     </div>
                 </div>
                 

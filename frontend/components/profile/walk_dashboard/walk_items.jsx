@@ -4,6 +4,14 @@ class WalkItem extends React.Component {
     render() {
         const { recentWalk } = this.props;
         // debugger;
+            // const d = recentWalk.date
+            // const month = d.getMonth();
+            // const day = parseFloat(d.getDate() + 0.5);
+            // const year = d.getFullYear();
+            // const date = `${month+1}-${parseInt(day)}-${year}`;
+
+        // recentWalk.date = date;
+
         const walkDuration = ( recentWalk.duration === '--' ) ? (
             recentWalk.duration
         ) : (

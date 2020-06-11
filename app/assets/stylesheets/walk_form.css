@@ -4,4 +4,118 @@
     flex-direction: column;
     position: relative;
     top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.log-header {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.log-header-container {
+    width: 634px;
+    height: 51px;
+    border-bottom: 1px solid #cccbcb;
+}
+
+.log-sub-header-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.log-sub-header-logo {
+    margin-right: 20px;
+}
+
+.log-sub-header-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    top: 13px;
+}
+
+.log-sub-header-2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 5px;
+    bottom: 38px;
+}
+
+.log-form-group-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.log-form {
+    background-color: rgba(211,214,220,0.2);
+    border: 1px solid #dadada;
+    width: 600px;
+    height: 417px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.log-walk-name {
+    margin-top: 12px;
+    margin-right: 80px;
+    margin-bottom: 12px;
+    width: 250px;
+    height: 28px;
+    padding: 12px 16px;
+    border: 1px solid #dadada;
+}
+
+.log-walk-date {
+    margin-top: 12px;
+    width: 200px;
+    height: 28px;
+    padding: 12px 16px;
+    border: 1px solid #dadada;
+}
+
+.log-walk-duration {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 60px;
+    height: 28px;
+    padding: 12px 16px;
+    border: 1px solid #dadada;
+}
+
+.log-walk-distance {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 200px;
+    height: 28px;
+    padding: 12px 16px;
+    border: 1px solid #dadada;
+}
+
+.log-walk-description {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    width: 94%;
+    height: 45%;
+    padding: 12px 16px;
+    border: 1px solid #dadada;
+}
+
+.log-walk-save {
+    width: 170px;
+    height: 44px;
+    position: relative;
+    top: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #0076c0;
+}
+
+.log-walk-save:hover {
+    cursor: pointer;
 }

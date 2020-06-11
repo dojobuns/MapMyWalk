@@ -15,8 +15,51 @@
     width: 618px;
     top: 200px;
     left: -395px;
-    background-color: cadetblue;
+    background-color: #f7f7f7;
     height: 445px;
+    border: 1.5px solid #cacaca;
+}
+
+.linechart {
+    position: relative;
+    top: 20px;
+    /* right: 30px; */
+    border-right: 1px solid #cacaca;
+    background-color: white;
+    border-top: 1.5px solid #cacaca;
+    border-bottom: 1.5px solid #cacaca
+}
+
+.barchart {
+    position: relative;
+    right: 40px;
+}
+
+.dashboard-distance-mi {
+    width: 160px;
+    height: 35px;
+    position: relative;
+    left: 450px;
+    top: 10px;
+    border: 1px solid #757575;
+    border-radius: 3px;
+}
+
+.bargraph-dates {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    
+    top: 90px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bargraph-date {
+    /* display: flex;
+    flex-direction: row; */
+    /* z-index: 10; */
+    font-size: 14px;
 }
 
 .total-walks-header {
@@ -116,10 +159,17 @@
 .distance-mile {
     position: relative;
     top: -125px;
-    left: 100px;
+    left: 120px;
 }
 
 .dashboard {
+    display: flex;
+    flex-direction: column;
+    /* border: 1.5px solid lightgray; */
+   
+}
+
+.dashboard-information {
     display: flex;
     flex-direction: row;
 }
@@ -132,21 +182,22 @@
 
 .dashboard-distance {
     border: 1.5px solid #cacaca;
+    border-left: none;
+    border-top: none;
 }
 
 .dashboard-duration {
-    border-top: 1.5px solid #cacaca;
     border-bottom: 1.5px solid #cacaca;
 }
 
 .dashboard-calories {
     border: 1.5px solid #cacaca;
+    border-top: none;
 }
 
 .dashboard-walks {
-    border-top: 1.5px solid #cacaca;
-    border-right: 1.5px solid #cacaca;
     border-bottom: 1.5px solid #cacaca;
+    border-right: 1px solid #cacaca;
 }
 
 .dashboard-header {
@@ -184,9 +235,10 @@
 }
 
 .tab-toggle > button {
-    width: 255px;
+    /* width: 255px; */
     height: 45px;
-    border-radius: 1px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     
     background-color: #f7f7f7;
     font-family: "Open Sans", sans-serif;
@@ -205,9 +257,9 @@
 
 .my-dashboard{
     border: 1px solid #cacaca;
-    border-left: none;
-    border-right: none;
+    width: 100%;
     border-bottom: none;
+
     border-top: 3px solid rgb(39, 140, 212);
 }
 

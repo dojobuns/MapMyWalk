@@ -9,7 +9,7 @@ const mapStateToProps = state => {
     const month = d.getMonth();
     const day = d.getDate();
     const year = d.getFullYear();
-    const date = `${year}/${month+1}/${day}`;
+    const date = `${month+1}/${day}/${year}`;
     // debugger;
 
     // for (var key in state.entities.walks) {

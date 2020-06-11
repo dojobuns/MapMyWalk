@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class NavBar extends React.Component{
 
@@ -48,15 +49,22 @@ class NavBar extends React.Component{
                 <Link to='/'>
                     <img src={window.mmw_logo_text} className='logo' width='170px' />
                 </Link>
-
                 
 
+                <FontAwesomeIcon icon={'walking'} className='nav-icons' />
+                <div className="dropdown-1">
+                    <Link to='my_routes' className='nav-routes nav-bar-item'>Walks</Link>
+                        <div className="dropdown-content-1">
+                            <Link to='/route/create' className='dropdown-box-1'>Create Walk</Link>
+                            <Link to='/my_walks' className='dropdown-box-1'>My Walks</Link>
+                        </div>
+                    </div>
+                <FontAwesomeIcon icon={['fab', 'linkedin-in']} className='nav-icons' />
                 <a href="https://www.linkedin.com/in/cliffordyan/" className='linkedin nav-bar-item'>LinkedIn</a>
+                <FontAwesomeIcon icon={['fab', 'github']} className='nav-icons' />
                 <a href="https://github.com/dojobuns" className='github nav-bar-item'>Github</a>
+                <FontAwesomeIcon icon={['fab', 'instagram']} className='nav-icons' />
                 <a href='https://www.instagram.com/teriy.akii/' className='challenges-nav nav-bar-item'>My dog :)</a>
-                <a className='go-mvp-nav nav-bar-item'>Go MVP</a>
-                <a className='blog-nav nav-bar-item'>Blog</a>
-                <a className='shop-nav nav-bar-item'>Shop</a>
 
                 {signinLoginButtons}
 
