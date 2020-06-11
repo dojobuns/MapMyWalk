@@ -1,6 +1,7 @@
 .front-page {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -8,8 +9,10 @@
     display: flex;
     justify-content: center;
     position:relative;
-    left: 250px;
-    top: 88px;
+    /* left: 250px; */
+    top: 85px;
+    height: 800px;
+
 }
 
 .signup-button-splash {
@@ -17,12 +20,12 @@
     font-size: 18px;
     font-weight: bold;
     position: relative;
-    top: 65px;
-    right: 390px;
+    bottom: 25px;
+    /* right: 390px; */
     color: white;
     height: 44px;
     width: 290px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     outline: none;
 }
@@ -32,17 +35,20 @@
 }
 
 .ash-yo-info {
-    position: relative;
-    top: 50px;
+    text-align: right;
+    position: absolute;
+    top: 95px;
+
+    left: 810px;
 }
 
 .own-every-step {
     font-weight: 900;
     font-size: 48px;
     font-family: Arial, Helvetica, sans-serif;
-    position: relative;
+    /* position: relative;
     top: 64px;
-    right: 575px;
+    right: 575px; */
     color: white;
 }
 
@@ -50,52 +56,66 @@
     font-family: 'Teko', sans-serif;   
     font-size: 60px;
     position: relative;
+    bottom: 75px;
+    left: 280px;
     color: white;
-    bottom: 30px;
-    right: 202px;
+    width: 200px;
 }
 
 .line-1 {
     position: relative;
-    bottom: 75px;
+    bottom: 125px;
 }
 
 .line-2 {
+    /* position: relative;
+    top: -5px; */
+}
+
+.splash-text-all {
     position: relative;
-    top: -5px;
+    bottom: 55px;
 }
 
 .splash-text-1 {
     font-family: Arial, Helvetica, sans-serif;   
-    position: relative;
+    /* position: relative;
     top: 25px;
-    right: 345px;
+    right: 345px; */
     color: white;
 }
 
 .splash-text-2 {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;   
-    position: relative;
+    /* position: relative;
     top: 25px;
-    right: 290px;
+    right: 290px; */
     color: white;
 }
 
 .splash-text-3 {
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;   
-    position: relative;
+    /* position: relative;
     top: 25px;
-    right: 267px;
+    right: 267px; */
     color: white;
+}
+
+.splash-pic-bottom {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 15px;
+    left: 253px;
 }
 
 .already-walker{
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    top: 100px;
-    right: 334px;
+    top: 7px;
+    right: 15px;
     color: white;
     font-style: italic;
 }
@@ -110,9 +130,6 @@
     border-radius: 5px;
     border-color: white;
     outline: none;
-    position: relative;
-    top: 76px;
-    right: 197px;
 }
 
 .login-button-splash:hover {
@@ -122,7 +139,7 @@
 .walk-nonsense {
     position: relative;
     top: 240px;
-    left: 100px;
+    left: 60px;
 }
 
 .nonsense-header {
@@ -143,8 +160,10 @@
 
 .splash-examples {
     position: relative;
-    bottom: 260px;
+    bottom: 220px;
     left: 450px;
+    width: 800px;
+    height: 500px;
 }
 
 .splash-example-2 {
@@ -155,13 +174,14 @@
 
 .splash-example-3 {
     position: relative;
-    bottom: 120px;
-    right: 400px;
+    bottom: 590px;
+    left: 350px;
 }
 
 .splash-wonky {
     position: relative;
     bottom: 100px;
+    right: 100px;
 }
 
 .splash-bottom-align {

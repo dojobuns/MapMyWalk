@@ -6,6 +6,7 @@ import {
 export default (state = {}, action) => {
     switch(action.type) {
         case RECEIVE_WALKS:
+            // debugger;
             return action.walks;
         case RECEIVE_WALK:
             const newState = Object.assign({}, state);

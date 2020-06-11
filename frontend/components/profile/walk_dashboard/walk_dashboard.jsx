@@ -1,18 +1,12 @@
 import React from 'react';
 import WalkItem from './walk_items';
-import TotalWalks from './total_walks';
+import TotalWalksContainer from './total_walks_container';
 import { selectAllWalks } from '../../../reducers/selectors';
 
 class WalkDashboard extends React.Component {
     constructor(props){
         super(props);
         this.changeTab = this.changeTab.bind(this);
-    }
-
-    componentDidMount(){
-        // debugger;
-        this.props.fetchWalks();
-        // this.props.fetchUsers();
     }
 
     changeTab(e) {
@@ -42,13 +36,13 @@ class WalkDashboard extends React.Component {
         return(
             <div>
                 <div className='tab-toggle'>
-                    <button className='activity-feed' onClick={this.changeTab}>ACTIVITY FEED</button>
+                    {/* <button className='activity-feed' onClick={this.changeTab}>ACTIVITY FEED</button> */}
                     <button className='my-dashboard' onClick={this.changeTab}>MY DASHBOARD</button>
-                    <button className='all-day' onClick={this.changeTab}>24 / 7</button>
+                    {/* <button className='all-day' onClick={this.changeTab}>24 / 7</button> */}
                 </div>
             <div className='dashboard-stuff dashboard-toggle-2'>
                 <div className='total-walks'>
-                    <TotalWalks walks={walks} />
+                    <TotalWalksContainer walks={walks} />
                 </div>
                 <div className='walk-dashboard-component'>
                     <ul style={{ listStyle: "none inside" }}>

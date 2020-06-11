@@ -8,7 +8,7 @@ const mapStateToProps = state => {
     const month = d.getMonth();
     const day = d.getDate();
     const year = d.getFullYear();
-    const date = `${year}-${month+1}-${day}`;
+    const date = `${month+1}-${day}-${year}`;
     return {
         walk: {
             walker_id: state.session.currentUser.user.id,

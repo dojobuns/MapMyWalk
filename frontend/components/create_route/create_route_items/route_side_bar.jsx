@@ -10,6 +10,16 @@ class RouteSideBar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+
+        const d = new Date(this.state.date);
+        debugger;
+        const month = d.getMonth();
+        const day = d.getDate();
+        const year = d.getFullYear();
+        const date = `${month+1}/${day}/${year}`;
+
+        this.state.date = date;
+
         this.state = {walk: this.state};
         // debugger;
         this.props.createWalk(this.state)

@@ -25,7 +25,7 @@ class RouteMap extends React.Component {
 
         const mapOptions = {
           center: { lat: 40.9148209, lng: -74.383763 },
-          zoom: 17,
+          zoom: 15,
           styles: this.props.mapStyles
         };
 
@@ -61,7 +61,7 @@ class RouteMap extends React.Component {
     calculateAndDisplayRoute(directionsService, directionsDisplay) {
         let that = this;
         let steps = this.markers.slice(1, this.markers.length - 1 ).map(marker => ({location: marker.position, stopover: true})) || [];
-        debugger;
+        // debugger;
         directionsService.route({
             origin: this.markers[0].position,
             waypoints: steps,

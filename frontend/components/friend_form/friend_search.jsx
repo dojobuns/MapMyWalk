@@ -9,7 +9,7 @@ class FriendSearch extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        debugger;
+        // debugger;
         this.props.friendSearch()
     }
 

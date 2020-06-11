@@ -4,10 +4,10 @@ import * as sessionApiUtil from './util/session_api_util';
 import configureStore from "./store/store";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faTimes, faUndo } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faTimes, faUndo, faWalking } from '@fortawesome/free-solid-svg-icons'
 import Root from "./components/root";
 
-library.add(fab, faCheckSquare, faCoffee, faTimes, faUndo)
+library.add(fab, faCheckSquare, faCoffee, faTimes, faUndo, faWalking)
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
