@@ -12,7 +12,7 @@ class RouteSideBar extends React.Component {
         e.preventDefault();
 
         const d = new Date(this.state.date);
-        debugger;
+        // debugger;
         const month = d.getMonth();
         const day = d.getDate();
         const year = d.getFullYear();
