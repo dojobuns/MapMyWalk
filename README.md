@@ -90,6 +90,6 @@ The profile page has a dashboard which collects your totals for all of your walk
 uses ReCharts, a graph making library, to display your 5 most recent walks and how far you walked in each of those.  Last but not least, the site currently displays your most recent walk and some key information on the bottom of the screen.
 
 Here's the logo and some graphics that I created!
-[logo]: https://github.com/dojobuns/MapMyWalk/blob/master/app/assets/images/mmwlogo.png
-[splash]: https://github.com/dojobuns/MapMyWalk/blob/master/app/assets/images/ash_yo_front_page.PNG
-[graphic]: https://github.com/dojobuns/MapMyWalk/blob/master/app/assets/images/splash-wonky.png
+![mmwlogo](https://github.com/dojobuns/MapMyWalk/blob/master/app/assets/images/mmwlogo.png)
+![splash](https://github.com/dojobuns/MapMyWalk/blob/master/app/assets/images/ash_yo_front_page.PNG)
+![graphic](https://github.com/dojobuns/MapMyWalk/blob/master/app/assets/images/splash-wonky.png)
