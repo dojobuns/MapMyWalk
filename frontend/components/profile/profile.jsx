@@ -12,6 +12,7 @@ class Profile extends React.Component {
     componentDidMount(){
         this.props.fetchWalks();
         this.props.fetchUsers();
+        debugger;
     }
 
     render(){

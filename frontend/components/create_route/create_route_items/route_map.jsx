@@ -49,7 +49,7 @@ class RouteMap extends React.Component {
 
         google.maps.event.addListener(this.map, 'click', (e) => {
             // var path = this.poly.getPath();
-            // debugger;
+            debugger;
             // path.push(e.latLng)
             this.addMarker(e.latLng);
             // this.directionsDisplay.setMap(this.map);     
@@ -92,8 +92,8 @@ class RouteMap extends React.Component {
                     // debugger;
                 } else {
                         // debugger;
-                        that.setState({duration: that.state.duration += lastDurationRouteLeg});
-                        that.setState({distance: that.state.distance += lastDistanceRouteLeg});
+                    that.setState({duration: that.state.duration += lastDurationRouteLeg});
+                    that.setState({distance: that.state.distance += lastDistanceRouteLeg});
                         // debugger;
                 }
                 // debugger;
@@ -190,12 +190,6 @@ class RouteMap extends React.Component {
 
         this.markers[this.markers.length - 1].setMap(this.map);
 
-        // if(this.markers.length === 1){
-            // debugger;
-            // this.directionsDisplay.setMap(null);
-            // this.directionsDisplay = null;
-        // };
-        // debugger;
         this.calculateAndDisplayRoute(this.directionsService, this.directionsDisplay);
     }
     
