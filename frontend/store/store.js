@@ -4,6 +4,6 @@ import checkType from '../middleware/thunk';
 import rootReducer from '../reducers/root_reducer';
 
 const configureStore = (preloadedState = {}) =>
-  createStore(rootReducer, preloadedState, applyMiddleware(checkType, logger));
+  createStore(rootReducer, preloadedState, applyMiddleware(checkType));
 
 export default configureStore;
