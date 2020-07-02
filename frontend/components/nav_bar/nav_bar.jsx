@@ -44,12 +44,15 @@ class NavBar extends React.Component{
         )
 
         const walkDropDown = this.props.currentUser ? (
-            <div className="dropdown-content-1">
+            <div className="dropdown-1">
+                    <Link to='my_routes' className='nav-routes nav-bar-item'>Walks</Link>
+                    <div className="dropdown-content-1">
                             <Link to='/route/create' className='dropdown-box-1'>Create Walk</Link>
                             <Link to='/my_walks' className='dropdown-box-1'>My Walks</Link>
                         </div>
+                    </div>
         ) : (
-            <span></span>
+            <div className='nav-routes nav-bar-item'>Walks</div>
         )
 
         return(
@@ -58,13 +61,9 @@ class NavBar extends React.Component{
                 <Link to='/'>
                     <img src={window.mmw_logo_text} className='logo' width='170px' />
                 </Link>
-                
 
                 <FontAwesomeIcon icon={'walking'} className='nav-icons' />
-                <div className="dropdown-1">
-                    <Link to='my_routes' className='nav-routes nav-bar-item'>Walks</Link>
-                        {walkDropDown}
-                    </div>
+                {walkDropDown}
                 <FontAwesomeIcon icon={['fab', 'linkedin-in']} className='nav-icons' />
                 <a href="https://www.linkedin.com/in/cliffordyan/" className='linkedin nav-bar-item'>LinkedIn</a>
                 <FontAwesomeIcon icon={['fab', 'github']} className='nav-icons' />
