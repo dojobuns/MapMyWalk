@@ -43,6 +43,15 @@ class NavBar extends React.Component{
             <span></span>
         )
 
+        const walkDropDown = this.props.currentUser ? (
+            <div className="dropdown-content-1">
+                            <Link to='/route/create' className='dropdown-box-1'>Create Walk</Link>
+                            <Link to='/my_walks' className='dropdown-box-1'>My Walks</Link>
+                        </div>
+        ) : (
+            <span></span>
+        )
+
         return(
             <div className='nav-bar'>
 
@@ -54,10 +63,7 @@ class NavBar extends React.Component{
                 <FontAwesomeIcon icon={'walking'} className='nav-icons' />
                 <div className="dropdown-1">
                     <Link to='my_routes' className='nav-routes nav-bar-item'>Walks</Link>
-                        <div className="dropdown-content-1">
-                            <Link to='/route/create' className='dropdown-box-1'>Create Walk</Link>
-                            <Link to='/my_walks' className='dropdown-box-1'>My Walks</Link>
-                        </div>
+                        {walkDropDown}
                     </div>
                 <FontAwesomeIcon icon={['fab', 'linkedin-in']} className='nav-icons' />
                 <a href="https://www.linkedin.com/in/cliffordyan/" className='linkedin nav-bar-item'>LinkedIn</a>

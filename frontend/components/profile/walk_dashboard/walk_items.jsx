@@ -29,7 +29,7 @@ class WalkItem extends React.Component {
                 <li className='walk-item-date'>{recentWalk.date}</li>
                 <div className='distance-item'>
                     <li className='distance-title'>Distance</li>
-                    <li className='walk-item-distance'>{recentWalk.distance.toFixed(2)}</li>
+                    <li className='walk-item-distance'>{recentWalk.distance.toFixed(1)}</li>
                     <div className='location-separator-line'></div>
                     <li className='distance-mile'>mi</li>
                 </div>
