@@ -41,9 +41,9 @@ class Profile extends React.Component {
                 </div>
                 <div className='profile-buttons-friends'>
                     <button className='edit-profile'>Edit Profile</button>
-                    <Link to='/profile/friends/find'>
+                    {/* <Link to='/profile/friends/find'> */}
                         <button className='find-friends'>Find Friends</button>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className='ua-box'></div>
                 <div className='triple-box'>

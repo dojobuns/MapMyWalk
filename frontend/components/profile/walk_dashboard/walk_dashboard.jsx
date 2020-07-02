@@ -37,7 +37,7 @@ class WalkDashboard extends React.Component {
             <div>
                 <div className='tab-toggle'>
                     {/* <button className='activity-feed' onClick={this.changeTab}>ACTIVITY FEED</button> */}
-                    <button className='my-dashboard' onClick={this.changeTab}>MY DASHBOARD</button>
+                    <button className='my-dashboard'>MY DASHBOARD</button>
                     {/* <button className='all-day' onClick={this.changeTab}>24 / 7</button> */}
                 </div>
             <div className='dashboard-stuff dashboard-toggle-2'>
